@@ -1,0 +1,17 @@
+a rough idea of what we have to do
+
+1. Initialize char myblock[4096]. Zero it. This block is the space we’ll be managing.
+2. Initialize a metadata struct inside this block that contains fields:
+   ⁃ size  — the amount of reservable memory
+   ⁃ in_use — whether or not the corresponding block of memory is reserved
+   ⁃ prev — a pointer to the previous metadata struct or NULL
+3. Say a user asks for x bytes:
+   1. Check the in_use field first block of memory. If it is in use, skip to the next block of memory (if it exists) and try again.
+   2. If you find an unused block, compare its size to x:
+      ⁃ If the block is too small, try the next block (if it exists). 
+      ⁃	If the block is too large, allocate the chunk you need and initialize the rest.
+      ⁃	If the block is just right, allocate it.
+4. Say a user asks to free a block of memory at address y.
+   1. Start at address 0.
+   2. Move forward the sizeof(metadata). If y is not equivalent to the current address, move forward the size of the metadata’s corresponding block, and try again.
+   3. If address y is found, then free its block, and concatenate it with any adjacent free blocks (prev may be useful here). Zero the newly freed space.
