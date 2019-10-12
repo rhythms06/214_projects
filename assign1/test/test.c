@@ -6,9 +6,9 @@ int main()
 {
 	printf("here we goo.\n\n");
 
-	malloc(10);
+	malloc(10, __FILE__, __LINE__);
 
-	free(NULL);
+	free(NULL, __FILE__, __LINE__);
 	
 	return 0;
 }
