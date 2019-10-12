@@ -1,3 +1,6 @@
 *.o
-test
-memgrind
+a.out
+
+# Assignment 1
+assign1/test/test
+assign1/memgrind
