@@ -3,9 +3,9 @@
 
 int main()
 {
-	printf("size of int: %d\n", sizeof(int));
+	printf("size of int: %lu\n", sizeof(int));
 
-	printf("size of short: %d\n", sizeof(short));
+	printf("size of short: %lu\n", sizeof(short));
 
 	struct s {
 		char inuse;
@@ -15,11 +15,11 @@ int main()
 
 	struct s S = {'t', 0, 500};
 
-	printf("size of S: %d\n", sizeof(S));
+	printf("size of S: %lu\n", sizeof(S));
 
-	printf("size of unsigned int: %d\n", sizeof(unsigned int));
+	printf("size of unsigned int: %lu\n", sizeof(unsigned int));
 
-	printf("size of unsigned short: %d\n", sizeof(unsigned short));
+	printf("size of unsigned short: %lu\n", sizeof(unsigned short));
 
 	//unsigned short in_use: 1 = 0;
 	//printf("size of in_use: %d\n", sizeof(in_use));
@@ -38,7 +38,7 @@ int main()
 
 
 
-	printf("size of bitfield_test: %d\n", sizeof(bitfield_test));
+	printf("size of bitfield_test: %lu\n", sizeof(bitfield_test));
 
 
 
@@ -61,7 +61,7 @@ int main()
 	}
 /*
 	i = 0;
-	
+
 	while(i < 16)
 	{
 		printf("memory[i]: %d\n", memory[i]);
