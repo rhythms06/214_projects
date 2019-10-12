@@ -5,6 +5,7 @@
 int main()
 {
 
+<<<<<<< HEAD
 	char* p = (char*)malloc(30);
 	// if(p != NULL)
 	// {
@@ -21,5 +22,11 @@ int main()
 
 	// printf("Testing complete.\n");
 
+=======
+	malloc(10, __FILE__, __LINE__);
+
+	free(NULL, __FILE__, __LINE__);
+	
+>>>>>>> 97ceddd4fc967859485689d2094619db0d099f6a
 	return 0;
 }

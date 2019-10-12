@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "mymalloc.h"
 
+<<<<<<< HEAD
 int firstTime = 1;
 
 void* mymalloc(size_t req_size, char* file, int line)
@@ -48,11 +49,20 @@ void* mymalloc(size_t req_size, char* file, int line)
 
 	printf("malloc(%zu) failed on %s:%d\n", req_size, file, line);
 
+=======
+void* mymalloc(size_t s, char* file, int line)
+{
+	printf("mymalloc called on line %d in file %s\n", line, file);
+>>>>>>> 97ceddd4fc967859485689d2094619db0d099f6a
 	return NULL;
 }
 
 int myfree(void* ptr, char* file, int line)
 {
+<<<<<<< HEAD
 	// printf("myfree called in file %s on line %d\n", file, line);
+=======
+	printf("myfree called on line %d in file %s\n", line, file);
+>>>>>>> 97ceddd4fc967859485689d2094619db0d099f6a
 	return 0;
 }

@@ -3,6 +3,7 @@
 
 int main()
 {
+<<<<<<< HEAD
 	printf("size of int: %lu\n", sizeof(int));
 
 	printf("size of short: %lu\n", sizeof(short));
@@ -20,45 +21,42 @@ int main()
 	printf("size of unsigned int: %lu\n", sizeof(unsigned int));
 
 	printf("size of unsigned short: %lu\n", sizeof(unsigned short));
-
-	//unsigned short in_use: 1 = 0;
-	//printf("size of in_use: %d\n", sizeof(in_use));
+=======
+	printf("size of int: %d\n", sizeof(int));
+	printf("size of short: %d\n", sizeof(short));
+	printf("size of unsigned int: %d\n", sizeof(unsigned int));
+	printf("size of unsigned short: %d\n", sizeof(unsigned short));
+>>>>>>> 97ceddd4fc967859485689d2094619db0d099f6a
 
 	typedef struct _metadata
 	{
 		unsigned short in_use: 1;
-		//unsigned short prev: 13;
 		unsigned short size: 13;
 	} metadata;
 
-
-
-
 	metadata bitfield_test = {1, 4095};
+<<<<<<< HEAD
 
 
 
 	printf("size of bitfield_test: %lu\n", sizeof(bitfield_test));
-
-
+=======
+	printf("size of bitfield_test: %d\n", sizeof(bitfield_test));
+>>>>>>> 97ceddd4fc967859485689d2094619db0d099f6a
 
 	char memory[4096] = {'\0'};
 
 	*(metadata *)(memory + 0) = bitfield_test;
-//	printf("%d\n", memory[0].in_use);
-
-	memory[5] = 'a';
-	//printf("(memory + 1): %d\n", (memory + 1));
 
 	int i = 0;
 	while(i < 16)
 	{
 		printf("memory[%u]: %u\n", i, ((metadata*)(memory + i))->in_use);
 		printf("memory[%u]: %u\n", i, ((metadata*)(memory + i))->size);
-		printf("(memory + %u): %u\n", i, (memory + i));
 		memory[i] = 0;
 		i++;
 	}
+<<<<<<< HEAD
 /*
 	i = 0;
 
@@ -81,6 +79,8 @@ int main()
 	printf("memory[0]: %d\n", memory[0]);
 	printf("memory[1]: %d\n", memory[1]);
 */
+=======
+>>>>>>> 97ceddd4fc967859485689d2094619db0d099f6a
 
 	return 0;
 }
