@@ -1,8 +1,9 @@
 #ifndef _MYMALLOC_H
 #define _MYMALLOC_H
 
-	// static array of size 4096 to represent memory to be allocated
-	static char mem[4096];
+	// mem will hold all user-accessible memory space.
+	// We initialize it as empty to make sure there isn't any gibberish in it.
+	static char mem[4096] = {'\0'};
 
 	typedef struct _metadata
 	{
@@ -26,6 +27,6 @@
 	/* function signature for myfree(x) which will be written in
 	 * mymalloc.c
 	 * */
-	int myfree(void*, char*, int);
+	void myfree(void*, char*, int);
 
 	#endif

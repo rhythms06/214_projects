@@ -5,19 +5,20 @@
 int main()
 {
 
-	char* p = (char*)malloc(30);
+	char* p = (char*)malloc(1);
 	// if(p != NULL)
 	// {
 	// 	printf("%c\n", *p);
 	// };
 
-	char* q = (char*)malloc(30);
+	char* q = (char*)malloc(1);
 	// if(q != NULL)
 	// {
 	// 	printf("%c\n", *q);
 	// };
 
-	free(NULL);
+	free(p);
+	free(q);
 
 	// printf("Testing complete.\n");
 

@@ -8,10 +8,20 @@ a rough idea of what we have to do
 3. Say a user asks for x bytes:
    1. Check the in_use field first block of memory. If it is in use, skip to the next block of memory (if it exists) and try again.
    2. If you find an unused block, compare its size to x:
-      ⁃ If the block is too small, try the next block (if it exists). 
+      ⁃ If the block is too small, try the next block (if it exists).
       ⁃	If the block is too large, allocate the chunk you need and initialize the rest.
       ⁃	If the block is just right, allocate it.
 4. Say a user asks to free a block of memory at address y.
    1. Start at address 0.
    2. Move forward the sizeof(metadata). If y is not equivalent to the current address, move forward the size of the metadata’s corresponding block, and try again.
-   3. If address y is found, then free its block, and concatenate it with any adjacent free blocks (prev may be useful here). Zero the newly freed space.
+   3. If address y is found, then free its block, and concatenate it with any adjacent free blocks:
+     1. Go backwards sizeof(metadata) indices.
+     2. Set in_use to 0.
+     3. Go backwards prev_size + sizeof(metadata) indices.
+     4. If in_use is 0, then set prev_free to 1.
+     5. Go forwards sizeof(metadata) + prev_size + sizeof(metadata) + size.
+     6. If in_use is 0, then set next_free to 1.
+     7a. If prev_free is 1 and next_free is 0, then set the size of the previous block to prev_size + size.
+     7b. If prev_free is 1 and next_free is 1, then set the size of the previous block to prev_size + size + next_size.
+     7c. If prev_free is 0 and next_free is 0, then do nothing.
+     7d. If prev_free is 0 and next_free is 1, then set the size of the current block to size + next_size.
