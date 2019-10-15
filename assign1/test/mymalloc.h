@@ -1,10 +1,6 @@
 #ifndef _MYMALLOC_H
 #define _MYMALLOC_H
 
-	// mem will hold all user-accessible memory space.
-	// We initialize it as empty to make sure there isn't any gibberish in it.
-	static char mem[4096] = {'\0'};
-
 	typedef struct _metadata
 	{
 		unsigned short in_use: 1;

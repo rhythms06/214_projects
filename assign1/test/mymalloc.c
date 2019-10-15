@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "mymalloc.h"
 
+// mem will hold all user-accessible memory space.
+// We initialize it as empty to make sure there isn't any gibberish in it.
+static char mem[4096] = {'\0'};
+
 int firstTime = 1;
 
 void* mymalloc(size_t req_size, char* file, int line)
@@ -15,6 +19,12 @@ void* mymalloc(size_t req_size, char* file, int line)
 		metadata block = {0, 4096-sizeof(metadata)};
 		*(metadata *)(mem + 0) = block;
 	};
+
+	if(req_size > 4096-sizeof(metadata))
+	{
+		printf("malloc(%zu) failed on %s:%d. Reason: REQUEST IS LARGER THAN AVAILABLE MEMORY.\n", req_size, file, line);
+		return NULL;
+	}
 
 	int index = 0;
 	while(index < 4096)
@@ -32,13 +42,14 @@ void* mymalloc(size_t req_size, char* file, int line)
 				((metadata*)(mem + index))->in_use = 1;
 				((metadata*)(mem + index))->size = req_size;
 				void* ptr = mem + index + sizeof(metadata);
+				// printf("Found an empty block %d bytes long\n", size);
 				// printf("Allocated %zu bytes at mem[%lu]\n", req_size, index + sizeof(metadata));
-				if(size > req_size && size-sizeof(metadata)-req_size >= sizeof(metadata))
+				if(size > req_size && size-req_size >= sizeof(metadata))
 				{
 					metadata block = {0, size-req_size-sizeof(metadata)};
 					*(metadata *)(mem + index + sizeof(metadata) + req_size) = block;
 					// printf("Also initialized a free block of size %lu at mem[%lu]\n",
-					// 	size-req_size-sizeof(metadata), index+sizeof(metadata)+req_size+sizeof(metadata));
+						// size-req_size-sizeof(metadata), index+sizeof(metadata)+req_size+sizeof(metadata));
 				}
 				// *(mem + index + sizeof(metadata)) = 'K';
 				return ptr;
@@ -49,7 +60,7 @@ void* mymalloc(size_t req_size, char* file, int line)
 		// printf("Next, we'll look at block %d\n", index);
 	}
 
-	printf("malloc(%zu) failed on %s:%d\n", req_size, file, line);
+	printf("malloc(%zu) failed on %s:%d. Reason: NO EMPTY BLOCK LARGE ENOUGH TO HOLD REQUESTED BYTES.\n", req_size, file, line);
 
 	return NULL;
 }
@@ -72,6 +83,8 @@ void myfree(void* ptr, char* file, int line)
 	// Whether or not the next block is in use.
 	// A value of 1 means that it is not in use and can be concatenated with a free block behind of it.
 	int next_free = 0;
+	// Whether or not we've found the pointer the user wants to free.
+	int success = 0;
 
 	while(index < 4096)
 	{
@@ -80,6 +93,7 @@ void myfree(void* ptr, char* file, int line)
 		index += sizeof(metadata);
 		if(mem + index == ptr && in_use == 1)
 		{
+			success = 1;
 			// printf("found the data we wanna free at mem[%d]!\n", index);
 			// printf("the previous metadata starts at mem[%lu] and has data size %d!\n", prev + sizeof(metadata), prev_size);
 
@@ -99,7 +113,7 @@ void myfree(void* ptr, char* file, int line)
 			if(index + sizeof(metadata) + size == 4094)
 			{
 				next_free = 1;
-				printf("the next metadata is not in use (2)\n");
+				// printf("the next metadata is not in use (2)\n");
 				next_size = 2;
 			}
 			if(index + sizeof(metadata) + size == 4095)
@@ -123,8 +137,8 @@ void myfree(void* ptr, char* file, int line)
 			if(prev_free == 0 && next_free == 1)
 			{
 				// Set the size of the current block to size + sizeof(metadata) + next_size.
-				((metadata*)(mem + index))->size = size + next_size;
-				// printf("the previous block at mem[%lu] now has size %lu\n", index + sizeof(metadata), size + sizeof(metadata) + next_size);
+				((metadata*)(mem + index))->size = size + sizeof(metadata) + next_size;
+				// printf("the current block at mem[%lu] now has size %lu\n", index + sizeof(metadata), size + sizeof(metadata) + next_size);
 			}
 		}
 		else
@@ -133,5 +147,10 @@ void myfree(void* ptr, char* file, int line)
 			prev_size = size;
 			index += size;
 		}
+	}
+
+	if(success == 0)
+	{
+		printf("free() failed on %s:%d. Reason: POINTER NOT FOUND IN MEMORY.\n", file, line);
 	}
 }
