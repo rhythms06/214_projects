@@ -5,63 +5,97 @@
 int main()
 {
 	// CASE 1: Trying to free something that isn't a pointer.
-	// int x = 0;
-	// free((int*)x);
+	int x = 0;
+	free((int*)x);
 
 	// CASE 2a: Trying to free something that was never saved to memory.
-	// char* y = (char*)malloc(200);
-	// free(y+10);
-	// free(y);
+	char* y = (char*)malloc(200);
+	free(y+10);
+	free(y);
 
 	// Case 2b: Trying to free something that was never saved to memory.
-	// int* z = NULL;
-	// free(z);
+	int* z = NULL;
+	free(z);
 
 	// Case 3:  Trying to free something twice.
-	// char* a = (char*)malloc(100);
-	// free(a);
-	// free(a);
+	char* a = (char*)malloc(100);
+	free(a);
+	free(a);
 
 	// Case 4: Allocating something, freeing it, allocating it again, freeing it again.
-	// char* b = (char*)malloc(100);
-	// free(b);
-	// b = (char*)malloc(100);
-	// free(b);
+	char* b = (char*)malloc(100);
+	free(b);
+	b = (char*)malloc(100);
+	free(b);
 
 	// Case 5a: Allocating too much memory.
-	// char* c = (char*)malloc(4097);
+	char* c = (char*)malloc(4097);
+	free(c);
 
 	// Case 5b: Allocating too much memory.
-	// char* d = (char*)malloc(4096-sizeof(metadata));
-	// char* e = (char*)malloc(1);
+	char* d = (char*)malloc(4096-sizeof(metadata));
+	char* e = (char*)malloc(1);
+	free(d);
+	free(e);
 
-	// TEST A
-	// char* f;
-	// for(int i = 0; i < 150; i++)
-	// {
-	// 	f = (char*)malloc(1);
-	// 	free(f);
-	// };
+	// TEST A: malloc() 1 byte and immediately free it - do this 150 times
+	char* f;
+	int g;
+	for(g = 0; g < 150; g++)
+	{
+		f = (char*)malloc(1);
+		free(f);
+	};
 
-	// TEST B
+	// TEST B: malloc() 1 byte, store the pointer in an array - do this 150 times.
+	// Once you've malloc()ed 50 byte chunks, then free() the 50 1 byte pointers one by one.
 
-	// if(p != NULL)
-	// {
-	// 	printf("%c\n", *p);
-	// };
+	char* h[150];
+	int i;
+	for(i = 0; i < 150; i++)
+	{
+		h[i] = (char*)malloc(1);
+		if(i == 49)
+		{
+			int j;
+			for(j = 0; j < 50; j++)
+			{
+				free(h[j]);
+			}
+		}
+	}
 
-	// char* q = (char*)malloc(1);
-	// if(q != NULL)
-	// {
-	// 	printf("%c\n", *q);
-	// };
+	int k;
+	for(k = 50; k < 150; k++)
+	{
+		free(h[k]);
+	}
 
+	// TEST C: C: Randomly choose between a 1 byte malloc() or free()ing a 1 byte pointer > do this until you have allocated 50 times
+	// - Keep track of each operation so that you eventually malloc() 50 bytes, in total
+	// > if you have already allocated 50 times, disregard the random and just free() on each
+	// iteration
+	// - Keep track of each operation so that you eventually free() all pointers
+	// > don't allow a free() if you have no pointers to free()C: Randomly choose between a 1 byte malloc() or free()ing a 1 byte pointer > do this until you have allocated 50 times
+	// - Keep track of each operation so that you eventually malloc() 50 bytes, in total
+	// > if you have already allocated 50 times, disregard the random and just free() on each
+	// iteration
+	// - Keep track of each operation so that you eventually free() all pointers
+	// > don't allow a free() if you have no pointers to free()
 
+	// ...write test code here...
 
-	// free(p);
-	// free(q);
+	// 	D: Randomly choose between a randomly-sized malloc() or free()ing a pointer – do this many times (see below)
+	// - Keep track of each malloc so that all mallocs do not exceed your total memory capacity - Keep track of each operation so that you eventually malloc() 50 times
+	// - Keep track of each operation so that you eventually free() all pointers
+	// - Choose a random allocation size between 1 and 64 bytes
 
-	// printf("Testing complete.\n");
+	// ...write test code here...
+
+	// E,F: Two more workloads of your choosing
+	// - Describe both workloads in your testplan.txt
+
+	// ...write test code here...
 
 	return 0;
 }
