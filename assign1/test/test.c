@@ -52,23 +52,17 @@ int main()
 
 	char* h[150];
 	int i;
-	for(i = 0; i < 150; i++)
+	for(i = 0; i < 3; i++)
 	{
-		h[i] = (char*)malloc(1);
-		if(i == 49)
+		int j;
+		for(j = (i*50); j < ((i*50)+50); j++)
 		{
-			int j;
-			for(j = 0; j < 50; j++)
-			{
-				free(h[j]);
-			}
+			h[j] = (char*)malloc(1);
 		}
-	}
-
-	int k;
-	for(k = 50; k < 150; k++)
-	{
-		free(h[k]);
+		for(j = (i*50); j < ((i*50)+50); j++)
+		{
+			free(h[j]);
+		}
 	}
 
 	// TEST C: C: Randomly choose between a 1 byte malloc() or free()ing a 1 byte pointer > do this until you have allocated 50 times
