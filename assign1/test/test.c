@@ -71,8 +71,9 @@ int main()
 	// > don't allow a free() if you have no pointers to free()
 
 	char* j[50] = {NULL};
-	int mallocs;
-	for(mallocs = 0; mallocs < 50; mallocs++)
+	int mallocs = 0;
+	int frees = 0;
+	while(mallocs < 50)
 	{
 		int k = (rand() % 2);
 		if(k == 0)
@@ -89,16 +90,21 @@ int main()
 		if(k == 1)
 		{
 			// free a 1 byte pointer
-			int m = (rand() % 50);
-			
-			while(j[m] == NULL)
+			if(mallocs != frees)
 			{
-				m = (rand() % 50);
-			};
-			free(j[m]);
+				int m = (rand() % 50);
+
+				while(j[m] == NULL)
+				{
+					m = (rand() % 50);
+				};
+				free(j[m]);
+				++frees;
+			}
 		}
 	}
-
+	// by now hopefully we've malloc'd 50 times
+	// now free any pointers that are still in j[].
 
 	// 	D: Randomly choose between a randomly-sized malloc() or free()ing a pointer – do this many times (see below)
 	// - Keep track of each malloc so that all mallocs do not exceed your total memory capacity - Keep track of each operation so that you eventually malloc() 50 times
