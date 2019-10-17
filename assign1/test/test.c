@@ -40,8 +40,7 @@ int main()
 
 	// TEST A: malloc() 1 byte and immediately free it - do this 150 times
 	char* f;
-	int g;
-	for(g = 0; g < 150; g++)
+	for(x = 0; x < 150; x++)
 	{
 		f = (char*)malloc(1);
 		free(f);
@@ -51,33 +50,55 @@ int main()
 	// Once you've malloc()ed 50 byte chunks, then free() the 50 1 byte pointers one by one.
 
 	char* h[150];
-	int i;
-	for(i = 0; i < 3; i++)
+	for(x = 0; x < 3; x++)
 	{
-		int j;
-		for(j = (i*50); j < ((i*50)+50); j++)
+		int i;
+		for(i = (x*50); i < ((x*50)+50); i++)
 		{
-			h[j] = (char*)malloc(1);
+			h[i] = (char*)malloc(1);
 		}
-		for(j = (i*50); j < ((i*50)+50); j++)
+		for(i = (x*50); i < ((x*50)+50); i++)
 		{
-			free(h[j]);
+			free(h[i]);
 		}
 	}
 
-	// TEST C: C: Randomly choose between a 1 byte malloc() or free()ing a 1 byte pointer > do this until you have allocated 50 times
-	// - Keep track of each operation so that you eventually malloc() 50 bytes, in total
-	// > if you have already allocated 50 times, disregard the random and just free() on each
-	// iteration
-	// - Keep track of each operation so that you eventually free() all pointers
-	// > don't allow a free() if you have no pointers to free()C: Randomly choose between a 1 byte malloc() or free()ing a 1 byte pointer > do this until you have allocated 50 times
+	// TEST C: Randomly choose between a 1 byte malloc() or free()ing a 1 byte pointer > do this until you have allocated 50 times
 	// - Keep track of each operation so that you eventually malloc() 50 bytes, in total
 	// > if you have already allocated 50 times, disregard the random and just free() on each
 	// iteration
 	// - Keep track of each operation so that you eventually free() all pointers
 	// > don't allow a free() if you have no pointers to free()
 
-	// ...write test code here...
+	char* j[50] = {NULL};
+	int mallocs;
+	for(mallocs = 0; mallocs < 50; mallocs++)
+	{
+		int k = (rand() % 2);
+		if(k == 0)
+		{
+			// malloc 1 byte
+			int l = (rand() % 50);
+			while(j[l] != NULL)
+			{
+				l = (rand() % 50);
+			};
+			j[l] = (char*)malloc(1);
+			++mallocs;
+		}
+		if(k == 1)
+		{
+			// free a 1 byte pointer
+			int m = (rand() % 50);
+			
+			while(j[m] == NULL)
+			{
+				m = (rand() % 50);
+			};
+			free(j[m]);
+		}
+	}
+
 
 	// 	D: Randomly choose between a randomly-sized malloc() or free()ing a pointer – do this many times (see below)
 	// - Keep track of each malloc so that all mallocs do not exceed your total memory capacity - Keep track of each operation so that you eventually malloc() 50 times
