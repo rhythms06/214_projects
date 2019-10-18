@@ -79,32 +79,61 @@ int main()
 		if(k == 0)
 		{
 			// malloc 1 byte
-			int l = (rand() % 50);
-			while(j[l] != NULL)
+			int l = 0;
+			while(j[l] != NULL && l < 50)
 			{
-				l = (rand() % 50);
+				++l;
 			};
-			j[l] = (char*)malloc(1);
-			++mallocs;
+			if(l < 50)
+			{
+				j[l] = (char*)malloc(1);
+				++mallocs;
+				printf("malloc #%d at j[%d]\n", mallocs, l);
+			}
+			else
+			{
+				// we have 50 bytes allocated in memory...
+				printf("all 50 bytes of j[] are in memory\n");
+				k = 2;
+				mallocs = 50;
+			}
 		}
 		if(k == 1)
 		{
 			// free a 1 byte pointer
-			if(mallocs != frees)
-			{
-				int m = (rand() % 50);
+			int m = 0;
 
-				while(j[m] == NULL)
-				{
-					m = (rand() % 50);
-				};
+			while(j[m] == NULL && m < 50)
+			{
+				++m;
+			};
+			if(m < 50)
+			{
+				printf("freeing 1 byte at j[%d]\n", m);
 				free(j[m]);
+				j[m] = NULL;
 				++frees;
+			}
+			else
+			{
+				// all pointers are free...
 			}
 		}
 	}
+
 	// by now hopefully we've malloc'd 50 times
 	// now free any pointers that are still in j[].
+
+	printf("we've malloc'd 50 times\n");
+	int n;
+	for(n = 0; n < 50; n++)
+	{
+		if(j[n] != NULL)
+		{
+			printf("freeing 1 byte at j[%d]\n", n);
+			free(j[n]);
+		}
+	}
 
 	// 	D: Randomly choose between a randomly-sized malloc() or free()ing a pointer – do this many times (see below)
 	// - Keep track of each malloc so that all mallocs do not exceed your total memory capacity - Keep track of each operation so that you eventually malloc() 50 times
