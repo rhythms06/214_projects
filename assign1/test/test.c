@@ -72,47 +72,47 @@ int main()
 
 	char* j[50] = {NULL};
 	int mallocs = 0;
-	int frees = 0;
+	// int frees = 0;
 	while(mallocs < 50)
 	{
-		int k = (rand() % 2);
-		if(k == 0)
+		x = (rand() % 2);
+		if(x == 0)
 		{
 			// malloc 1 byte
-			int l = 0;
-			while(j[l] != NULL && l < 50)
+			int k = 0;
+			while(j[k] != NULL && k < 50)
 			{
-				++l;
+				++k;
 			};
-			if(l < 50)
+			if(k < 50)
 			{
-				j[l] = (char*)malloc(1);
+				j[k] = (char*)malloc(1);
 				++mallocs;
-				printf("malloc #%d at j[%d]\n", mallocs, l);
+				printf("malloc #%d at j[%d]\n", mallocs, k);
 			}
 			else
 			{
 				// we have 50 bytes allocated in memory...
 				printf("all 50 bytes of j[] are in memory\n");
-				k = 2;
+				x = 2;
 				mallocs = 50;
 			}
 		}
-		if(k == 1)
+		if(x == 1)
 		{
 			// free a 1 byte pointer
-			int m = 0;
+			int l = 0;
 
-			while(j[m] == NULL && m < 50)
+			while(j[l] == NULL && l < 50)
 			{
-				++m;
+				++l;
 			};
-			if(m < 50)
+			if(l < 50)
 			{
-				printf("freeing 1 byte at j[%d]\n", m);
-				free(j[m]);
-				j[m] = NULL;
-				++frees;
+				printf("freeing 1 byte at j[%d]\n", l);
+				free(j[l]);
+				j[l] = NULL;
+				// ++frees;
 			}
 			else
 			{
@@ -125,13 +125,12 @@ int main()
 	// now free any pointers that are still in j[].
 
 	printf("we've malloc'd 50 times\n");
-	int n;
-	for(n = 0; n < 50; n++)
+	for(x = 0; x < 50; x++)
 	{
-		if(j[n] != NULL)
+		if(j[x] != NULL)
 		{
-			printf("freeing 1 byte at j[%d]\n", n);
-			free(j[n]);
+			printf("freeing 1 byte at j[%d]\n", x);
+			free(j[x]);
 		}
 	}
 
@@ -140,7 +139,31 @@ int main()
 	// - Keep track of each operation so that you eventually free() all pointers
 	// - Choose a random allocation size between 1 and 64 bytes
 
-	// ...write test code here...
+	mallocs = 0;
+	int malloc_size = 0;
+	while(mallocs < 50)
+	{
+		x = rand() % 2;
+		if(x == 0)
+		{
+			// malloc b/w 1 and 64 bytes
+			int m = (rand() % 64) + 1;
+			// m is the number of bytes we need to malloc
+			if(malloc_size+m < 4096-sizeof(metadata))
+			{
+				//...allocate m bytes...
+				malloc_size += m;
+			}
+		}
+		if(x == 1)
+		{
+			// free a pointer
+		}
+	}
+
+	printf("we've malloc'd 50 times\n");
+	//...free everything...
+
 
 	// E,F: Two more workloads of your choosing
 	// - Describe both workloads in your testplan.txt
