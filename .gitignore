@@ -3,4 +3,8 @@ a.out
 
 # Assignment 1
 assign1/test/test
+assign1/test/tmp
+assign1/test/*.o
+assign1/test/a.out
 assign1/memgrind
+assign1/*.o
