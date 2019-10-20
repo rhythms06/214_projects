@@ -9,18 +9,16 @@ int firstTime = 1;
 
 void* mymalloc(size_t req_size, char* file, int line)
 {
-	// printf("mymalloc called in file %s on line %d\n", file, line);
-
 	if(firstTime == 1)
 	{
 		// This is our first ever memory allocation, so let's
 		// set firstTime to 0 and make our first block!
 		firstTime = 0;
-		metadata block = {0, 4096-sizeof(metadata)};
+		metadata block = {0, 4096-SIZE_META};
 		*(metadata *)(mem + 0) = block;
 	};
 
-	if(req_size > 4096-sizeof(metadata))
+	if(req_size > 4096-SIZE_META)
 	{
 		printf("malloc(%zu) failed on %s:%d. Reason: REQUEST IS LARGER THAN AVAILABLE MEMORY.\n", req_size, file, line);
 		return NULL;
@@ -41,22 +39,22 @@ void* mymalloc(size_t req_size, char* file, int line)
 				// printf("Requested: %zu bytes | Available: %d bytes\n", req_size, size);
 				((metadata*)(mem + index))->in_use = 1;
 				((metadata*)(mem + index))->size = req_size;
-				void* ptr = mem + index + sizeof(metadata);
+				void* ptr = mem + index + SIZE_META;
 				// printf("Found an empty block %d bytes long\n", size);
-				// printf("Allocated %zu bytes at mem[%lu]\n", req_size, index + sizeof(metadata));
-				if(size > req_size && size-req_size >= sizeof(metadata))
+				// printf("Allocated %zu bytes at mem[%lu]\n", req_size, index + SIZE_META);
+				if(size > req_size && size-req_size >= SIZE_META)
 				{
-					metadata block = {0, size-req_size-sizeof(metadata)};
-					*(metadata *)(mem + index + sizeof(metadata) + req_size) = block;
+					metadata block = {0, size-req_size-SIZE_META};
+					*(metadata *)(mem + index + SIZE_META + req_size) = block;
 					// printf("Also initialized a free block of size %lu at mem[%lu]\n",
-						// size-req_size-sizeof(metadata), index+sizeof(metadata)+req_size+sizeof(metadata));
+						// size-req_size-SIZE_META, index+SIZE_META+req_size+SIZE_META);
 				}
-				// *(mem + index + sizeof(metadata)) = 'K';
+				// *(mem + index + SIZE_META) = 'K';
 				return ptr;
 			}
 		}
 
-		index += (sizeof(metadata) + size);
+		index += (SIZE_META + size);
 		// printf("Next, we'll look at block %d\n", index);
 	}
 
@@ -67,8 +65,8 @@ void* mymalloc(size_t req_size, char* file, int line)
 
 void myfree(void* ptr, char* file, int line)
 {
-	// printf("myfree called in file %s on line %d\n", file, line);
 
+	if(ptr == NULL) {printf("trying to free NULL\n");}
 	// The starting index of the previous block of metadata.
 	int prev = -1;
 	// The size of the previous data block.
@@ -90,60 +88,66 @@ void myfree(void* ptr, char* file, int line)
 	{
 		int in_use = ((metadata*)(mem + index))->in_use;
 		int size = ((metadata*)(mem + index))->size;
-		index += sizeof(metadata);
+		index += SIZE_META;
 		if(mem + index == ptr && in_use == 1)
 		{
 			success = 1;
 			// printf("found the data we wanna free at mem[%d]!\n", index);
-			// printf("the previous metadata starts at mem[%lu] and has data size %d!\n", prev + sizeof(metadata), prev_size);
+			// printf("the previous metadata starts at mem[%lu] and has data size %d!\n", prev + SIZE_META, prev_size);
 
-			index -= sizeof(metadata);
+			index -= SIZE_META;
 			((metadata*)(mem + index))->in_use = 0;
-			if(prev != -1 && ((metadata*)(mem + index - prev_size - sizeof(metadata)))->in_use == 0)
+			// previous metadata not in use
+			if(prev != -1 && ((metadata*)(mem + index - prev_size - SIZE_META))->in_use == 0)
 			{
 				prev_free = 1;
 				// printf("the previous metadata is not in use\n");
 			}
-			if(index + sizeof(metadata) + size < 4096 - sizeof(metadata) && ((metadata*)(mem + index + sizeof(metadata) + size))->in_use == 0)
+			// next metadata is not in use. get size of next free block of mem.
+			if(index + SIZE_META + size < 4096 - SIZE_META && ((metadata*)(mem + index + SIZE_META + size))->in_use == 0)
 			{
 				next_free = 1;
-				next_size = ((metadata*)(mem + index + sizeof(metadata) + size))->size;
+				next_size = ((metadata*)(mem + index + SIZE_META + size))->size;
 				// printf("the next metadata is not in use and has size %d (1)\n", next_size);
 			}
-			if(index + sizeof(metadata) + size == 4094)
+
+			/* I don't understand these two conditions */
+			if(index + SIZE_META + size == 4094)
 			{
 				next_free = 1;
 				// printf("the next metadata is not in use (2)\n");
 				next_size = 2;
 			}
-			if(index + sizeof(metadata) + size == 4095)
+			if(index + SIZE_META + size == 4095)
 			{
 				next_free = 1;
 				// printf("the next metadata is not in use (3)\n");
 				next_size = 1;
 			}
+			/* -------------------------------------- */
+			
 			if(prev_free == 1 && next_free == 0)
 			{
-				// Set the size of the previous block to prev_size + sizeof(metadata) + size.
-				((metadata*)(mem + index - prev_size - sizeof(metadata)))->size = prev_size + sizeof(metadata) + size;
+				// Set the size of the previous block to prev_size + SIZE_META + size.
+				((metadata*)(mem + index - prev_size - SIZE_META))->size = prev_size + SIZE_META + size;
 				// printf("the previous block at mem[%d] now has size %d\n", index - prev_size, prev_size + size);
 			}
 			if(prev_free == 1 && next_free == 1)
 			{
 				// Set the size of the previous block to prev_size + size + next_size.
-				((metadata*)(mem + index - prev_size - sizeof(metadata)))->size = prev_size + sizeof(metadata) + size + sizeof(metadata) + next_size;
-				// printf("the previous block at mem[%d] now has size %lu\n", index - prev_size, prev_size + sizeof(metadata) + size + sizeof(metadata) + next_size);
+				((metadata*)(mem + index - prev_size - SIZE_META))->size = prev_size + SIZE_META + size + SIZE_META + next_size;
+				// printf("the previous block at mem[%d] now has size %lu\n", index - prev_size, prev_size + SIZE_META + size + SIZE_META + next_size);
 			}
 			if(prev_free == 0 && next_free == 1)
 			{
-				// Set the size of the current block to size + sizeof(metadata) + next_size.
-				((metadata*)(mem + index))->size = size + sizeof(metadata) + next_size;
-				// printf("the current block at mem[%lu] now has size %lu\n", index + sizeof(metadata), size + sizeof(metadata) + next_size);
+				// Set the size of the current block to size + SIZE_META + next_size.
+				((metadata*)(mem + index))->size = size + SIZE_META + next_size;
+				// printf("the current block at mem[%lu] now has size %lu\n", index + SIZE_META, size + SIZE_META + next_size);
 			}
 		}
 		else
 		{
-			prev = index - sizeof(metadata);
+			prev = index - SIZE_META;
 			prev_size = size;
 			index += size;
 		}
