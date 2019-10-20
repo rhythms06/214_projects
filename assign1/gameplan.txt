@@ -25,3 +25,35 @@ a rough idea of what we have to do
      7b. If prev_free is 1 and next_free is 1, then set the size of the previous block to prev_size + size + next_size.
      7c. If prev_free is 0 and next_free is 0, then do nothing.
      7d. If prev_free is 0 and next_free is 1, then set the size of the current block to size + next_size.
+
+
+To do:
+	- finish Worklod D
+	- build the run-time evaluation structure
+		- calculate and print
+	- build Workload E
+	- build Workload F
+	- handle all error cases in mymalloc and myfree and print error messages
+	  gracefully to stderr.
+	  	- mymalloc()
+		- myfree()
+			- free(NULL)
+	
+	- (a) run a test and record results.
+		- optimize code
+		- rinse and repeat
+
+	- revise and finalize the above gameplan
+
+	- describe Workloads E and F in testplan.txt
+
+	- build readme.pdf
+		- copy revised gameplan to readme
+		- include a description of our metadata struct and how/why we decided to
+		  use that implementation.
+		- copy results and optimizations to readme
+
+
+
+
+
