@@ -10,9 +10,18 @@ int main()
 
 	typedef struct _metadata
 	{
-		unsigned short in_use: 1;
-		unsigned short size: 13;
+		unsigned short int in_use: 1;
+		unsigned short int size: 13;
+		unsigned short int : 0;
 	} metadata;
+
+	typedef struct {
+		unsigned char is_keyword : 1;
+		unsigned char is_extern : 1;
+		unsigned char is_static : 1;
+	} flags;
+	
+	printf("sizeof \"flags\": %d\n", sizeof(flags));
 
 	metadata bitfield_test = {1, 4095};
 	printf("size of bitfield_test: %lu\n", sizeof(bitfield_test));
