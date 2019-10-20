@@ -28,11 +28,24 @@ a rough idea of what we have to do
 
 
 To do:
-	- finish Worklod D
+
+	X finish Workload D
+		- found a bug in myfree()
+			* on successful free, myfree did not return. 
+			- something is still wrong.
+		- found bug in mymalloc()
+			- something wrong. don't know where or what.
+		- free or malloc fail randomly. Seems to be affected by the randomness
+		  in Workloads C and D. Currently, I believe there is likely an issue
+		  with managing mem[4096] in the backend, but not sure.
+
 	- build the run-time evaluation structure
-		- calculate and print
+		- calculate and prin
+
 	- build Workload E
+
 	- build Workload F
+
 	- handle all error cases in mymalloc and myfree and print error messages
 	  gracefully to stderr.
 	  	- mymalloc()
