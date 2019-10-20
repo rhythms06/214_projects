@@ -1,28 +1,25 @@
 #ifndef _MYMALLOC_H
 #define _MYMALLOC_H
 
+	/* used bitfields for optimal metadata */
 	typedef struct _metadata
 	{
 		unsigned short in_use: 1;
 		unsigned short size: 13;
+		unsigned short : 0; // used for padding unused bits.
 	} metadata;
 
-	/* macro that will replace all calls to malloc(x) with calls to
-	 * mymalloc(x)
-	 * */
+	/* macros that will replace all calls to malloc(x) with calls to mymalloc(x)
+	 * and replace all calls to free(x) with myfree(x). */
 	#define malloc(size) mymalloc(size, __FILE__, __LINE__)
-
-	/* macro that will replace all calls to free(x) to myfree(x) */
 	#define free(ptr) myfree(ptr, __FILE__, __LINE__)
 
-	/* function signature for mymalloc(x) which will be written in
-	 * mymalloc.c
-	* */
+	/* function signatures. functions written in mymalloc.c library */
 	void* mymalloc(size_t, char*, int);
-
-	/* function signature for myfree(x) which will be written in
-	 * mymalloc.c
-	 * */
 	void myfree(void*, char*, int);
+
+	/* general purpose macros */
+	#define SIZE_META sizeof(metadata)
+
 
 	#endif
