@@ -39,7 +39,7 @@ void* mymalloc(size_t req_size, char* file, int line)
 				// printf("Requested: %zu bytes | Available: %d bytes\n", req_size, size);
 				((metadata*)(mem + index))->in_use = 1;
 				((metadata*)(mem + index))->size = req_size;
-				void* ptr = mem + index + SIZE_META;
+				void* ptr = (mem + (index + SIZE_META));
 				// printf("Found an empty block %d bytes long\n", size);
 				// printf("Allocated %zu bytes at mem[%lu]\n", req_size, index + SIZE_META);
 				if(size > req_size && size-req_size >= SIZE_META)
@@ -52,6 +52,9 @@ void* mymalloc(size_t req_size, char* file, int line)
 				// *(mem + index + SIZE_META) = 'K';
 				return ptr;
 			}
+			/* not enough available space */
+			fprintf(stderr, "malloc(%zu) failed on %s: %d\n\tran out of memory.\n", req_size, file, line);
+			return NULL;
 		}
 
 		index += (SIZE_META + size);
@@ -144,6 +147,7 @@ void myfree(void* ptr, char* file, int line)
 				((metadata*)(mem + index))->size = size + SIZE_META + next_size;
 				// printf("the current block at mem[%lu] now has size %lu\n", index + SIZE_META, size + SIZE_META + next_size);
 			}
+			return;
 		}
 		else
 		{
