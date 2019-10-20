@@ -8,3 +8,6 @@ assign1/test/*.o
 assign1/test/a.out
 assign1/memgrind
 assign1/*.o
+assign1/test/.mymalloc.c.swp
+assign1/test/.mymalloc.h.swp
+assign1/test/.test.c.swp
