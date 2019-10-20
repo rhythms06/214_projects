@@ -21,5 +21,13 @@
 	/* general purpose macros */
 	#define SIZE_META sizeof(metadata)
 
+	/* error macros */
+	#define ERR_STR "error: %s:%d: error: %s"
+	#define MEM_FULL "no available memory\n"
+	#define NO_SPACE "insufficient available memory\n"
+	#define FR_NULL "attempt to free NULL\n"
+	#define PTR_DNE "attempt to free non-allocated memory\n"
+	
+
 
 	#endif

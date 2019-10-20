@@ -130,7 +130,7 @@ int main()
 				{
 					++l;
 				};
-				if(l < 50)
+				if(j[l] != NULL && l < 50)
 				{
 					//printf("freeing 1 byte at j[%d]\n", l);
 					free(j[l]);
@@ -166,6 +166,7 @@ int main()
 		// - Choose a random allocation size between 1 and 64 bytes
 		gettimeofday(&start, NULL);
 		mallocs = 0;
+		char* arrD[50] = {NULL};
 		//int malloc_size = 0;
 		//srand(time(NULL));
 		while(mallocs < 50)
@@ -177,44 +178,31 @@ int main()
 				// m is the number of bytes we need to malloc
 				int m = (rand() % 64) + 1;
 				int k = 0;
-				while(j[k] != NULL && k < 50)
+				while(arrD[k] != NULL && k < 50)
 				{
 					k++;
 				}
 				//printf("malloc %d: %d bytes at j[%d]\n", mallocs, m, k);
-				j[k] = (char*)malloc(sizeof(char) * m);
-				mallocs++;
+				if(arrD[k] == NULL && k < 50)
+				{
+					arrD[k] = (char*)malloc(sizeof(char) * m);
+					mallocs++;
+				}
 			}
 			else if(x == 1)
 			{
 				int l = 0;
-				while(j[l] == NULL && l < 50)
+				while(arrD[l] == NULL && l < 50)
 				{
 					l++;
 				}
-				if(l < 50)
+				if(arrD[l] != NULL && l < 50)
 				{
 					//printf("free memory at j[%d]\n", l);
-					free(j[l]);
-					j[l] = NULL;
+					free(arrD[l]);
+					arrD[l] = NULL;
 				}
 			}
-
-	///////////////// user should not be checking available memory before trying to malloc.
-				/*
-				if(malloc_size+m < 4096-sizeof(metadata)) 
-				{
-					//...allocate m bytes...
-					
-					malloc_size += m;
-				}
-			}
-			if(x == 1)
-			{
-				// free a pointer
-			}
-			mallocs++;
-			*/
 		}
 
 		// malloc'd 50 times. free remaining memory.
@@ -222,11 +210,11 @@ int main()
 		x = 0;
 		while(x < 50)
 		{
-			if(j[x] != NULL)
+			if(arrD[x] != NULL)
 			{
 				//printf("freeing memory at j[%d]\n", x);
-				free(j[x]);
-				j[x] = NULL;	
+				free(arrD[x]);
+				arrD[x] = NULL;	
 			}
 			x++;
 

@@ -9,6 +9,12 @@ int firstTime = 1;
 
 void* mymalloc(size_t req_size, char* file, int line)
 {
+	/* Error: users requests to allocate 0 memory */
+	if(req_size <= 0)
+	{
+		fprintf(stderr, ERR_STR, file, line, "cannot allocate <= 0 bytes\n");
+		return NULL;
+	}
 	if(firstTime == 1)
 	{
 		// This is our first ever memory allocation, so let's
@@ -20,7 +26,8 @@ void* mymalloc(size_t req_size, char* file, int line)
 
 	if(req_size > 4096-SIZE_META)
 	{
-		printf("malloc(%zu) failed on %s:%d. Reason: REQUEST IS LARGER THAN AVAILABLE MEMORY.\n", req_size, file, line);
+		fprintf(stderr, ERR_STR, file, line, MEM_FULL);
+		//printf("malloc(%zu) failed on %s:%d. Reason: REQUEST IS LARGER THAN AVAILABLE MEMORY.\n", req_size, file, line);
 		return NULL;
 	}
 
@@ -53,15 +60,16 @@ void* mymalloc(size_t req_size, char* file, int line)
 				return ptr;
 			}
 			/* not enough available space */
-			fprintf(stderr, "malloc(%zu) failed on %s: %d\n\tran out of memory.\n", req_size, file, line);
+			//fprintf(stderr, "malloc(%zu) failed on %s: %d\n\tran out of memory.\n", req_size, file, line);
+			fprintf(stderr, ERR_STR, file, line, MEM_FULL);
 			return NULL;
 		}
 
 		index += (SIZE_META + size);
 		// printf("Next, we'll look at block %d\n", index);
 	}
-
-	printf("malloc(%zu) failed on %s:%d. Reason: NO EMPTY BLOCK LARGE ENOUGH TO HOLD REQUESTED BYTES.\n", req_size, file, line);
+	fprintf(stderr, ERR_STR, file, line, NO_SPACE);
+	//printf("malloc(%zu) failed on %s:%d. Reason: NO EMPTY BLOCK LARGE ENOUGH TO HOLD REQUESTED BYTES.\n", req_size, file, line);
 
 	return NULL;
 }
@@ -69,7 +77,10 @@ void* mymalloc(size_t req_size, char* file, int line)
 void myfree(void* ptr, char* file, int line)
 {
 
-	if(ptr == NULL) {printf("trying to free NULL\n");}
+	if(ptr == NULL)
+	{
+		fprintf(stderr, ERR_STR, file, line, FR_NULL);
+	}
 	// The starting index of the previous block of metadata.
 	int prev = -1;
 	// The size of the previous data block.
@@ -159,6 +170,7 @@ void myfree(void* ptr, char* file, int line)
 
 	if(success == 0)
 	{
-		printf("free() failed on %s:%d. Reason: POINTER NOT FOUND IN MEMORY.\n", file, line);
+		fprintf(stderr, ERR_STR, file, line, PTR_DNE);
+		//printf("free() failed on %s:%d. Reason: POINTER NOT FOUND IN MEMORY.\n", file, line);
 	}
 }
