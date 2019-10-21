@@ -1,0 +1,12 @@
+Workload E:
+
+We created a linked list of 20 nodes, populated each node with random integer
+data, and then freed them.
+We wanted to do this workload because it was different then the ones assigned,
+and we wanted to actually use the data that we were allocating. 
+
+
+Workload F:
+
+It's 11:48 as I write this. 
+Not gonna happen. :(
