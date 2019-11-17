@@ -1,0 +1,9 @@
+Our general plan is to try multiprocessing and then try multithreading with increasing list sizes.
+
+Our first size is 250. We start searching with one process and one thread, and then increment the number of processes and threads, until for each we start to find diminishing returns in speed.
+
+After that, we try a size of 300 with two threads and two processes. The main purpose of this test is to ensure that our code works with list sizes not divisible by 250.
+
+Then we try sizes in increments of 250, starting with 500. Each time, we put each process and thread in charge of searching 250 integers. We stop soon after multiprocessing takes as long as using one process to search 250 integers.
+
+We try this entire experiment three times and note the min, max, average, and standard deviation for every data point.
