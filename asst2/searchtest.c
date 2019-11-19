@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-// #include "multitest.h"
+#include <time.h>
+#include "multitest.h"
 
 void generateArray(int* array, int length) {
   int i;
@@ -9,24 +10,34 @@ void generateArray(int* array, int length) {
     array[i] = i;
   }
   int minScrambles = ((length *  3) + (4 - 1)) / 4;
-  printf("Let's scramble %d out of %d integers.\n", minScrambles, length);
+  int swap1, swap2, tmp; swap1 = swap2 = tmp = -1;
+  srand(time(NULL));
+  //printf("Let's scramble %d out of %d integers.\n", minScrambles, length);
   for(i = 0; i < minScrambles; i++)
   {
-    int swapIndex = (rand() % length);
-    array[swapIndex] = i;
-    array[i] = swapIndex;
+    //int swapIndex = (rand() % length);
+	//printf("%d:\t", swapIndex);
+    //array[swapIndex] = i;
+    //array[i] = swapIndex;
+	swap1 = (rand() % length);
+	swap2 = (rand() % length);
+	tmp = array[swap1];
+	array[swap1] = array[swap2];
+	array[swap2] = tmp;
   }
+  printf("\n");
 }
 
 int main(int argc, char** argv) {
   int* array0 = (int*) malloc(250 * sizeof(int));
   if(array0 == NULL)
   {
-    printf("Memory allocation failed :()\n");
+    //printf("Memory allocation failed :()\n");
     return -1;
   }
   generateArray(array0, 250);
-  // printf("array0: %d %d %d %d ...\n", array0[0], array0[1], array0[2], array0[3]);
+  //printf("array0: %d %d %d %d ...\n", array0[0], array0[1], array0[2], array0[3]);
+  search(69, array0, 250);
   free(array0);
 
 
