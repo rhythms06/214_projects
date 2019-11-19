@@ -1,5 +1,5 @@
 all:
-	$(error "Target not recongized. Did you mean 'make proc' or 'make thread'?")
+	$(error Target not recognized. Did you mean 'make proc' or 'make thread'?)
 
 proc: searchtest.c multitest_proc.o
 	gcc searchtest.c multitest_proc.o
