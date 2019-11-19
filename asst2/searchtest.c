@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-<<<<<<< HEAD
-#include <sys/time.h>
-=======
 #include <time.h>
->>>>>>> 3e5409d0a0afdaadb627c53a7180f1fbded16cfb
 #include "multitest.h"
 
 void generateArray(int* array, int length) {
@@ -14,17 +10,13 @@ void generateArray(int* array, int length) {
     array[i] = i;
   }
   int minScrambles = ((length *  3) + (4 - 1)) / 4;
-<<<<<<< HEAD
-  // printf("Let's scramble %d out of %d integers.\n", minScrambles, length);
-=======
   int swap1, swap2, tmp; swap1 = swap2 = tmp = -1;
   srand(time(NULL));
   //printf("Let's scramble %d out of %d integers.\n", minScrambles, length);
->>>>>>> 3e5409d0a0afdaadb627c53a7180f1fbded16cfb
   for(i = 0; i < minScrambles; i++)
   {
     //int swapIndex = (rand() % length);
-	//printf("%d:\t", swapIndex);
+	  //printf("%d:\t", swapIndex);
     //array[swapIndex] = i;
     //array[i] = swapIndex;
 	swap1 = (rand() % length);
@@ -46,19 +38,14 @@ int main(int argc, char** argv) {
     return -1;
   }
   generateArray(array0, 250);
-<<<<<<< HEAD
   // printf("array0: %d %d %d %d ...\n", array0[0], array0[1], array0[2], array0[3]);
   // PROTOTYPE: dummy_search(target, array, numChunks, found);
   // gettimeofday(&start, NULL);
-  // dummy_search(69, array0, 250, 1, &found);
+  search(69, array0, 250);
   // gettimeofday(&stop, NULL);
   long seconds = (stop.tv_sec - start.tv_sec);
   long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
   printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
-=======
-  //printf("array0: %d %d %d %d ...\n", array0[0], array0[1], array0[2], array0[3]);
-  search(69, array0, 250);
->>>>>>> 3e5409d0a0afdaadb627c53a7180f1fbded16cfb
   free(array0);
 
   // int array1[300] = {0};

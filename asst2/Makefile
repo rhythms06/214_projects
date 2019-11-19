@@ -1,10 +1,6 @@
 all:
-<<<<<<< HEAD
-	$(error Target not recognized. Did you mean 'make proc' or 'make thread'?)
-=======
 	@echo "*** error:"
-	@echo "Target not recongized. Did you mean 'make proc' or 'make thread'?"
->>>>>>> 3e5409d0a0afdaadb627c53a7180f1fbded16cfb
+	@echo "Target not recognized. Did you mean 'make proc' or 'make thread'?"
 
 proc: searchtest.c multitest_proc.o
 	gcc searchtest.c multitest_proc.o -o proctest
