@@ -1,5 +1,6 @@
 *.o
 a.out
+tmp.*
 
 # Assignment 1
 assign1/test/test
