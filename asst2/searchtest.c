@@ -26,34 +26,44 @@ void generateArray(int* array, int length) {
 int main(int argc, char** argv) {
   // int found = 0;
   // struct timeval start, stop;
-  int* array0 = (int*) malloc(250 * sizeof(int));
-  if(array0 == NULL)
-  {
-    //printf("Memory allocation failed :()\n");
-    return -1;
-  }
-  generateArray(array0, 250);
-  int i = 0;
-	while( i < 250 )
-	{
-		// printf("*(array0 + %d): %d\n", i, *(array0 + i));
-		i++;
-	}
-  // PROTOTYPE: dummy_search(target, array, numChunks, found);
-  // gettimeofday(&start, NULL);
-  // search(69, array0, 250);
-  // gettimeofday(&stop, NULL);
-  // long seconds = (stop.tv_sec - start.tv_sec);
-  // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
-  // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
-  free(array0);
 
-  // int array1[300] = {0};
-  // int array2[500] = {0};
-  // int array3[1000] = {0};
-  // int array4[2000] = {0};
-  // int array5[4000] = {0};
-  // int array6[8000] = {0};
-  // int array7[16000] = {0};
-  // int array8[32000] = {0};
+  int testsizes[9] = {250, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000};
+
+  int i;
+
+  for(i = 0; i < 9; i++)
+  {
+    int* array = (int*) malloc(testsizes[i] * sizeof(int));
+    if(array == NULL)
+    {
+      printf("Memory allocation failed :()\n");
+      return -1;
+    }
+    generateArray(array, testsizes[i]);
+
+    // int j = 0;
+  	// while( j < 5 )
+  	// {
+  	// 	printf("%d ", *(array + j));
+  	// 	j++;
+  	// }
+    // printf("\n");
+
+    int chunks;
+    for(chunks = 0; chunks < 5; chunks++)
+    {
+      // gettimeofday(&start, NULL);
+      // CALL search() HERE with the inputs:
+        // List: array
+        // Size: testsizes[i]
+        // Query: query
+        // Result: found
+      // gettimeofday(&stop, NULL);
+      // long seconds = (stop.tv_sec - start.tv_sec);
+      // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
+      // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
+    }
+
+    free(array);
+  }
 }
