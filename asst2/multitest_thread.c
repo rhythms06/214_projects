@@ -1,4 +1,9 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <pthread.h>
+#include <errno.h>
 #include "multitest.h"
 
 void search(int list_size, int query) {
