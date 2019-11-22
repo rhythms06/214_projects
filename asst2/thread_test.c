@@ -35,6 +35,7 @@ static void* search_t(void* args)
 
 void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 {
+	printf("target: %d\tlen: %d\tbites: %d\n", target, len, bites);
 	int workers = ceil((double)len/bites);
 	thread_info *threads = calloc(workers, sizeof(thread_info));
 	if(threads == NULL)
@@ -60,15 +61,13 @@ void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 		tnum++;
 	}
 	tnum = 0;
-	void* res = NULL;
-	/*
+	//void* res = NULL;
 	void* res = malloc(sizeof(void*));
 	if(res == NULL)
 	{ // obligatory error check
 		fprintf(stderr, "error: unable to allocate memory\n");
 		exit(EXIT_FAILURE);
 	}
-	*/
 	while(tnum < workers)
 	{
 		s = pthread_join(threads[tnum].thread_id, &res);
@@ -78,9 +77,9 @@ void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 			exit(EXIT_FAILURE);
 		}
 		printf("Joined with thread %d. res: %d\n", threads[tnum].thread_num, (int*)res);
-		free(res); // free memory allocated by thread I guess? (from man pages).
 		tnum++;
 	}
+	free(res); 
 	free(threads);
 	exit(EXIT_SUCCESS);
 }
