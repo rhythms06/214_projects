@@ -31,7 +31,7 @@ void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 		{
 			printf("child %d -- PID: %d\n", i, getpid());
 			j = start = (bites * i);
-			end = j + bites;
+			end = start + bites;
 			if(end >= len)
 			{
 				end = len;
