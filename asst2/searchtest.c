@@ -27,23 +27,22 @@ int main(int argc, char** argv) {
   // int found = 0;
   // struct timeval start, stop;
 
-  int testsizes[9] = {250, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000};
+  int testlengths[9] = {250, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000};
 
   int i;
 
   for(i = 0; i < 9; i++)
   {
-    int size = testsizes[i];
-    int* array = (int*) malloc(size * sizeof(int));
+    int length = testlengths[i];
+    int* array = (int*) malloc(length * sizeof(int));
     if(array == NULL)
     {
       printf("Memory allocation failed :()\n");
       return -1;
     }
-    generateArray(array, size);
+    generateArray(array, length);
 
-    // Uncomment the following to print out
-    // the first few random numbers we just generated.
+    // Print the first few random numbers we just generated.
     //
     // int j = 0;
   	// while( j < 5 )
@@ -53,34 +52,16 @@ int main(int argc, char** argv) {
   	// }
     // printf("\n");
 
-    // Try an iterative search first.
-    //
-    // gettimeofday(&start, NULL);
-    // CALL search() HERE with the inputs:
-      // List: array
-      // Size: testsizes[i]
-      // Workers: 1
-      // Query: query
-      // Result: found
-    // gettimeofday(&stop, NULL);
-    // long seconds = (stop.tv_sec - start.tv_sec);
-    // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
-    // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
-
-    // Now try searhing with an increasing number of workers,
-    // making sure that no worker is searching more than 250 integers.
-    //
-    int min_workers = (size +  (250 - 1)) / 250;
-    // The '5' in the line below is arbitrary.
-    int max_workers = min_workers + 5;
-    int workers;
-    for(workers = min_workers; workers < max_workers; workers++)
+    int chunkSize;
+    for(chunkSize = 1; chunkSize <= length; chunkSize++)
     {
+      // Set a timer, call search(), and stop the timer.
+      //
       // gettimeofday(&start, NULL);
       // CALL search() HERE with the inputs:
         // List: array
-        // Size: testsizes[i]
-        // Workers: workers
+        // Size: testlengths[i]
+        // Chunk Size: chunkSize
         // Query: query
         // Result: found
       // gettimeofday(&stop, NULL);
