@@ -18,19 +18,33 @@ typedef struct
 	int bites;
 } thread_info;
 
-static void* search_t(void* args)
+void* search_t(void* args)
 {
 	thread_info *thread = args;
 	int i, start, end;	
+	int* res = (int*)malloc(sizeof(int));
+	if( res == NULL)
+	{ 
+		fprintf(stderr, "%s\n", strerror(errno));
+		exit(EXIT_FAILURE);
+	}
 	i = start = thread->bites * thread->thread_num;
 	end = start + thread->bites;
 	if(end >= thread->len)
 	{
 		end = thread->len;
 	}
-	printf("thread: %d\tstart: %d\tend: %d\n", thread->thread_num, start, end);
-	int titties = 420;
-	pthread_exit((void*)&titties);
+	while(i < end)
+	{
+		if(thread->target == *(thread->arr + i))
+		{ // target found. let's get outta here!
+			i = i - start;
+			*res = i;
+			pthread_exit((void*)res);
+		}
+		i++;
+	}
+	return NULL;
 }
 
 void dummy_search(int target, int* arr, int len, int bites, int* ifound)
@@ -61,14 +75,6 @@ void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 	}
 	tnum = 0;
 	void* res = NULL;
-	/*
-	void* res = malloc(sizeof(void*));
-	if(res == NULL)
-	{ // obligatory error check
-		fprintf(stderr, "error: unable to allocate memory\n");
-		exit(EXIT_FAILURE);
-	}
-	*/
 	while(tnum < workers)
 	{
 		s = pthread_join(threads[tnum].thread_id, &res);
@@ -77,10 +83,14 @@ void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 			fprintf(stderr, "error: thread %d not joined\n", tnum);
 			exit(EXIT_FAILURE);
 		}
-		printf("Joined with thread %d. res: %d\n", threads[tnum].thread_num, (int*)res);
-		free(res); // free memory allocated by thread I guess? (from man pages).
+		if(res != NULL)
+		{ // res :- index of found target in arr.
+			*ifound = *((int*)res) + (bites * threads[tnum].thread_num);
+		}
 		tnum++;
 	}
+
+	free(res); 
 	free(threads);
-	exit(EXIT_SUCCESS);
+	return;
 }
