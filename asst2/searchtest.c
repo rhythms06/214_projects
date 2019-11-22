@@ -27,20 +27,23 @@ int main(int argc, char** argv) {
   // int found = 0;
   // struct timeval start, stop;
 
-  int testsizes[9] = {250, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000};
+  int testlengths[9] = {250, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000};
 
   int i;
 
   for(i = 0; i < 9; i++)
   {
-    int* array = (int*) malloc(testsizes[i] * sizeof(int));
+    int length = testlengths[i];
+    int* array = (int*) malloc(length * sizeof(int));
     if(array == NULL)
     {
       printf("Memory allocation failed :()\n");
       return -1;
     }
-    generateArray(array, testsizes[i]);
+    generateArray(array, length);
 
+    // Print the first few random numbers we just generated.
+    //
     // int j = 0;
   	// while( j < 5 )
   	// {
@@ -49,13 +52,17 @@ int main(int argc, char** argv) {
   	// }
     // printf("\n");
 
-    int chunks;
-    for(chunks = 0; chunks < 5; chunks++)
+    int chunkSize;
+    int minChunkSize = (length + (100-1))/100;
+    for(chunkSize = minChunkSize; chunkSize <= 250; chunkSize++)
     {
+      // Set a timer, call search(), and stop the timer.
+      //
       // gettimeofday(&start, NULL);
       // CALL search() HERE with the inputs:
         // List: array
-        // Size: testsizes[i]
+        // Size: length
+        // Chunk Size: chunkSize
         // Query: query
         // Result: found
       // gettimeofday(&stop, NULL);
@@ -63,6 +70,21 @@ int main(int argc, char** argv) {
       // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
       // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
     }
+
+    // Set a timer, call search(), and stop the timer.
+    //
+    // gettimeofday(&start, NULL);
+    // CALL search() HERE with the inputs:
+      // List: array
+      // Size: testlengths[i]
+      // Chunk Size: length
+      // Query: query
+      // Result: found
+    // gettimeofday(&stop, NULL);
+    // long seconds = (stop.tv_sec - start.tv_sec);
+    // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
+    // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
+
 
     free(array);
   }
