@@ -67,6 +67,7 @@ int main(int argc, char** argv) {
     int minChunkSize = (length + (100-1))/100;
     int numWorkers = 0;
     int iter;
+    // Change maxIter if you want more or less iterations per testcase.
     int maxIter = 3;
     long timeArray[maxIter];
     long currTime;
@@ -79,6 +80,8 @@ int main(int argc, char** argv) {
 
     for(chunkSize = minChunkSize; chunkSize <= 250; chunkSize++)
     {
+      // This if() clause skips the current chunkSize if it
+      // results in a numWorkers that we've already encountered.
       if(numWorkers != ceil((double)length/chunkSize))
       {
         numWorkers = ceil((double)length/chunkSize);
@@ -114,6 +117,7 @@ int main(int argc, char** argv) {
       }
     }
 
+    // Do everything once more to handle the testcase where workers = 1.
     gettimeofday(&start, NULL);
     minTime = start.tv_usec;
     maxTime = 0;
