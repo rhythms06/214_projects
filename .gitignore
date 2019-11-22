@@ -1,6 +1,8 @@
 *.o
 a.out
 tmp.*
+test.c
+proc_test.c
 
 # Assignment 1
 assign1/test/test
