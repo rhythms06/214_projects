@@ -63,9 +63,11 @@ int main(int argc, char** argv) {
     int query = 63;
     printf("Query: %d.\n", query);
 
-    int chunkSize;
-    int minChunkSize = (length + (100-1))/100;
+    int chunkSize = 0;
+    // int minChunkSize = (length + (15-1))/15;
+    // int maxChunkSize = 250;
     int numWorkers = 0;
+    int minWorkers = (length + (250-1))/250;
     int iter;
     // Change maxIter if you want more or less iterations per testcase.
     int maxIter = 3;
@@ -78,13 +80,14 @@ int main(int argc, char** argv) {
     long avgTime;
     long stDev;
 
-    for(chunkSize = minChunkSize; chunkSize <= 250; chunkSize++)
+    for(numWorkers = minWorkers; numWorkers <= (minWorkers + 9); numWorkers++)
     {
-      // This if() clause skips the current chunkSize if it
-      // results in a numWorkers that we've already encountered.
-      if(numWorkers != ceil((double)length/chunkSize))
-      {
-        numWorkers = ceil((double)length/chunkSize);
+      chunkSize = ceil((double)length/numWorkers);
+      // if(numWorkers != ceil((double)length/chunkSize))
+      // if(chunkSize != ceil((double)length/numWorkers))
+      // {
+      //   chunkSize = ceil((double)length/numWorkers);
+        // numWorkers = ceil((double)length/chunkSize);
         gettimeofday(&start, NULL);
         minTime = start.tv_usec;
         maxTime = 0;
@@ -102,9 +105,7 @@ int main(int argc, char** argv) {
           sumOfTimes += currTime;
           if(currTime < minTime){minTime = currTime;}
           if(currTime > maxTime){maxTime = currTime;}
-          long seconds = (stop.tv_sec - start.tv_sec);
-          long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
-          printf("Time elapsed: %ld microseconds, or %ld.%ld seconds.\n", currTime, seconds, micros);
+          printf("Time elapsed: %ld microseconds.\n", currTime);
         }
         avgTime = sumOfTimes/3;
         for(iter = 1; iter <= maxIter; iter++)
@@ -113,11 +114,12 @@ int main(int argc, char** argv) {
           stDev = stDev/(maxIter - 1);
           stDev = sqrt(stDev);
         }
-        printf("Min: %ld ms. - Max: %ld ms. - Average: %ld ms. - Standard Deviation: %ld ms.\n", minTime, maxTime, avgTime, stDev);
-      }
+        printf("Min: %ld us. - Max: %ld us. - Average: %ld us. - Standard Deviation: %ld us.\n", minTime, maxTime, avgTime, stDev);
+      // }
     }
 
-    // Do everything once more to handle the testcase where workers = 1.
+    // Do everything once more with just one Process.
+    printf("Mode: Just one process. - List Size: %d.\n", length);
     gettimeofday(&start, NULL);
     minTime = start.tv_usec;
     maxTime = 0;
@@ -125,19 +127,24 @@ int main(int argc, char** argv) {
     for(iter = 1; iter <= maxIter; iter++)
     {
       printf("Iteration #%d out of %d.\n", iter, maxIter);
-      // Set a timer, call search(), and stop the timer.
+      // Set a timer, search, and stop the timer.
       //
       gettimeofday(&start, NULL);
-      search(62, array, length, length, found);
+      int index;
+      for(index = 0; index < length && index != -1; index++)
+      {
+        if(array[index] == query)
+        {
+          index = length;
+        }
+      }
       gettimeofday(&stop, NULL);
       currTime = (stop.tv_usec - start.tv_usec);
       timeArray[iter - 1] = currTime;
       sumOfTimes += currTime;
       if(currTime < minTime){minTime = currTime;}
       if(currTime > maxTime){maxTime = currTime;}
-      long seconds = (stop.tv_sec - start.tv_sec);
-      long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
-      printf("Time elapsed: %ld microseconds, or %ld.%ld seconds.\n", currTime, seconds, micros);
+      printf("Time elapsed: %ld microseconds.\n", currTime);
     };
     avgTime = sumOfTimes/3;
     for(iter = 1; iter <= maxIter; iter++)
@@ -146,7 +153,7 @@ int main(int argc, char** argv) {
       stDev = stDev/(maxIter - 1);
       stDev = sqrt(stDev);
     }
-    printf("Min: %ld ms. - Max: %ld ms. - Average: %ld ms. - Standard Deviation: %ld ms.\n", minTime, maxTime, avgTime, stDev);
+    printf("Min: %ld us. - Max: %ld us. - Average: %ld us. - Standard Deviation: %ld ms.\n", minTime, maxTime, avgTime, stDev);
 
 
     free(array);
