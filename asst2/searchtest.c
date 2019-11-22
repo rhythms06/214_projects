@@ -33,14 +33,18 @@ int main(int argc, char** argv) {
 
   for(i = 0; i < 9; i++)
   {
-    int* array = (int*) malloc(testsizes[i] * sizeof(int));
+    int size = testsizes[i];
+    int* array = (int*) malloc(size * sizeof(int));
     if(array == NULL)
     {
       printf("Memory allocation failed :()\n");
       return -1;
     }
-    generateArray(array, testsizes[i]);
+    generateArray(array, size);
 
+    // Uncomment the following to print out
+    // the first few random numbers we just generated.
+    //
     // int j = 0;
   	// while( j < 5 )
   	// {
@@ -49,13 +53,34 @@ int main(int argc, char** argv) {
   	// }
     // printf("\n");
 
-    int chunks;
-    for(chunks = 0; chunks < 5; chunks++)
+    // Try an iterative search first.
+    //
+    // gettimeofday(&start, NULL);
+    // CALL search() HERE with the inputs:
+      // List: array
+      // Size: testsizes[i]
+      // Workers: 1
+      // Query: query
+      // Result: found
+    // gettimeofday(&stop, NULL);
+    // long seconds = (stop.tv_sec - start.tv_sec);
+    // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
+    // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
+
+    // Now try searhing with an increasing number of workers,
+    // making sure that no worker is searching more than 250 integers.
+    //
+    int min_workers = (size +  (250 - 1)) / 250;
+    // The '5' in the line below is arbitrary.
+    int max_workers = min_workers + 5;
+    int workers;
+    for(workers = min_workers; workers < max_workers; workers++)
     {
       // gettimeofday(&start, NULL);
       // CALL search() HERE with the inputs:
         // List: array
         // Size: testsizes[i]
+        // Workers: workers
         // Query: query
         // Result: found
       // gettimeofday(&stop, NULL);
