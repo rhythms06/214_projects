@@ -53,14 +53,14 @@ int main(int argc, char** argv) {
     // printf("\n");
 
     int chunkSize;
-    for(chunkSize = 1; chunkSize <= length; chunkSize++)
+    for(chunkSize = 1; chunkSize <= 250; chunkSize++)
     {
       // Set a timer, call search(), and stop the timer.
       //
       // gettimeofday(&start, NULL);
       // CALL search() HERE with the inputs:
         // List: array
-        // Size: testlengths[i]
+        // Size: length
         // Chunk Size: chunkSize
         // Query: query
         // Result: found
@@ -69,6 +69,21 @@ int main(int argc, char** argv) {
       // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
       // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
     }
+
+    // Set a timer, call search(), and stop the timer.
+    //
+    // gettimeofday(&start, NULL);
+    // CALL search() HERE with the inputs:
+      // List: array
+      // Size: testlengths[i]
+      // Chunk Size: length
+      // Query: query
+      // Result: found
+    // gettimeofday(&stop, NULL);
+    // long seconds = (stop.tv_sec - start.tv_sec);
+    // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
+    // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
+
 
     free(array);
   }
