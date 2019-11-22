@@ -37,7 +37,7 @@ void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 				end = len;
 			}
 			while(j < end)
-			{ 
+			{
 				if(target == *(arr + j))
 				{ // target found. let's get outta here!
 					printf("*(arr + %d): %d\n", j, *(arr + j));

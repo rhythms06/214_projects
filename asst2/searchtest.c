@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
+#include <math.h>
 #include "multitest.h"
 
 void generateArray(int* array, int length) {
@@ -24,10 +25,17 @@ void generateArray(int* array, int length) {
 }
 
 int main(int argc, char** argv) {
-  // int found = 0;
-  // struct timeval start, stop;
+  int* found = (int*)malloc(sizeof(int));
+  if(found == NULL)
+  {
+    printf("Memory allocation failed!\n");
+    exit(EXIT_FAILURE);
+  }
+
+  struct timeval start, stop;
 
   int testlengths[9] = {250, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000};
+  // int testlengths[1] = {250};
 
   int i;
 
@@ -37,8 +45,8 @@ int main(int argc, char** argv) {
     int* array = (int*) malloc(length * sizeof(int));
     if(array == NULL)
     {
-      printf("Memory allocation failed :()\n");
-      return -1;
+      printf("Memory allocation failed!\n");
+      exit(EXIT_FAILURE);
     }
     generateArray(array, length);
 
@@ -52,38 +60,89 @@ int main(int argc, char** argv) {
   	// }
     // printf("\n");
 
+    int query = 63;
+    printf("Query: %d.\n", query);
+
     int chunkSize;
     int minChunkSize = (length + (100-1))/100;
+    int numWorkers = 0;
+    int iter;
+    int maxIter = 3;
+    long timeArray[maxIter];
+    long currTime;
+    gettimeofday(&start, NULL);
+    long minTime = start.tv_usec;
+    long maxTime = 0;
+    long sumOfTimes = 0;
+    long avgTime;
+    long stDev;
+
     for(chunkSize = minChunkSize; chunkSize <= 250; chunkSize++)
     {
-      // Set a timer, call search(), and stop the timer.
-      //
-      // gettimeofday(&start, NULL);
-      // CALL search() HERE with the inputs:
-        // List: array
-        // Size: length
-        // Chunk Size: chunkSize
-        // Query: query
-        // Result: found
-      // gettimeofday(&stop, NULL);
-      // long seconds = (stop.tv_sec - start.tv_sec);
-      // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
-      // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
+      if(numWorkers != ceil((double)length/chunkSize))
+      {
+        numWorkers = ceil((double)length/chunkSize);
+        gettimeofday(&start, NULL);
+        minTime = start.tv_usec;
+        maxTime = 0;
+        sumOfTimes = 0;
+        for(iter = 1; iter <= maxIter; iter++)
+        {
+          printf("Iteration #%d out of %d.\n", iter, maxIter);
+          // Set a timer, call search(), and stop the timer.
+          //
+          gettimeofday(&start, NULL);
+          search(62, array, length, chunkSize, found);
+          gettimeofday(&stop, NULL);
+          currTime = (stop.tv_usec - start.tv_usec);
+          timeArray[iter - 1] = currTime;
+          sumOfTimes += currTime;
+          if(currTime < minTime){minTime = currTime;}
+          if(currTime > maxTime){maxTime = currTime;}
+          long seconds = (stop.tv_sec - start.tv_sec);
+          long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
+          printf("Time elapsed: %ld microseconds, or %ld.%ld seconds.\n", currTime, seconds, micros);
+        }
+        avgTime = sumOfTimes/3;
+        for(iter = 1; iter <= maxIter; iter++)
+        {
+          stDev += pow((timeArray[iter - 1] - avgTime),2);
+          stDev = stDev/(maxIter - 1);
+          stDev = sqrt(stDev);
+        }
+        printf("Min: %ld ms. - Max: %ld ms. - Average: %ld ms. - Standard Deviation: %ld ms.\n", minTime, maxTime, avgTime, stDev);
+      }
     }
 
-    // Set a timer, call search(), and stop the timer.
-    //
-    // gettimeofday(&start, NULL);
-    // CALL search() HERE with the inputs:
-      // List: array
-      // Size: testlengths[i]
-      // Chunk Size: length
-      // Query: query
-      // Result: found
-    // gettimeofday(&stop, NULL);
-    // long seconds = (stop.tv_sec - start.tv_sec);
-    // long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
-    // printf("Time elapsed: %ld.%ld seconds.\n", seconds, micros);
+    gettimeofday(&start, NULL);
+    minTime = start.tv_usec;
+    maxTime = 0;
+    sumOfTimes = 0;
+    for(iter = 1; iter <= maxIter; iter++)
+    {
+      printf("Iteration #%d out of %d.\n", iter, maxIter);
+      // Set a timer, call search(), and stop the timer.
+      //
+      gettimeofday(&start, NULL);
+      search(62, array, length, length, found);
+      gettimeofday(&stop, NULL);
+      currTime = (stop.tv_usec - start.tv_usec);
+      timeArray[iter - 1] = currTime;
+      sumOfTimes += currTime;
+      if(currTime < minTime){minTime = currTime;}
+      if(currTime > maxTime){maxTime = currTime;}
+      long seconds = (stop.tv_sec - start.tv_sec);
+      long micros = ((seconds * 1000000) + stop.tv_usec) - (start.tv_usec);
+      printf("Time elapsed: %ld microseconds, or %ld.%ld seconds.\n", currTime, seconds, micros);
+    };
+    avgTime = sumOfTimes/3;
+    for(iter = 1; iter <= maxIter; iter++)
+    {
+      stDev += pow((timeArray[iter - 1] - avgTime),2);
+      stDev = stDev/(maxIter - 1);
+      stDev = sqrt(stDev);
+    }
+    printf("Min: %ld ms. - Max: %ld ms. - Average: %ld ms. - Standard Deviation: %ld ms.\n", minTime, maxTime, avgTime, stDev);
 
 
     free(array);
