@@ -53,7 +53,8 @@ int main(int argc, char** argv) {
     // printf("\n");
 
     int chunkSize;
-    for(chunkSize = 1; chunkSize <= 250; chunkSize++)
+    int minChunkSize = (length + (100-1))/100;
+    for(chunkSize = minChunkSize; chunkSize <= 250; chunkSize++)
     {
       // Set a timer, call search(), and stop the timer.
       //
