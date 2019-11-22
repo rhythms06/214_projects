@@ -9,7 +9,7 @@
 #include "multitest.h"
 
 /*
- * I'm pretty sure this is 100% correct. 
+ * I'm pretty sure this is 100% correct.
  * Ready for plug-and-play.
  * Let me know if you run into any problems during testing.
  */
@@ -17,9 +17,10 @@
 void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 {
 	pid_t cpid;
-	int i, j, start, end; 
+	int i, j, start, end;
 	i = 0;
 	int workers = ceil((double)len/bites);
+	printf("Mode: Multiprocessing. - List Size: %d. - Chunk Size: %d. - # Processes: %d\n", len, bites, workers);
 	while(i < workers)
 	{
 		cpid = fork();
@@ -36,7 +37,7 @@ void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 				end = len;
 			}
 			while(j < end)
-			{ 
+			{
 				if(target == *(arr + j))
 				{ // target found. let's get outta here!
 					j = j - start;

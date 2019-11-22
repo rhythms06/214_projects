@@ -18,7 +18,7 @@ int main()
 	int* arr = (int*)malloc(len * sizeof(int));
 	int* found = (int*)malloc(sizeof(int));;
 	if(arr == NULL || found == NULL) { printf("error.\n"); exit(EXIT_FAILURE); }
-	
+
 	i = 0;
 	while(i < len)
 	{
@@ -30,7 +30,7 @@ int main()
 	int swap1, swap2, tmp; swap1 = swap2 = tmp = -1;
   	srand(time(NULL));
   	//printf("Let's scramble %d out of %d integers.\n", minScrambles, length);
-	
+
   	for(i = 0; i < minScrambles; i++)
   	{
 		swap1 = (rand() % len);
@@ -39,7 +39,7 @@ int main()
 		arr[swap1] = arr[swap2];
 		arr[swap2] = tmp;
 	}
-	
+
 	i = 0;
 	while(i < 700)
 	{
@@ -52,9 +52,8 @@ int main()
 	}
 	search(301, arr, len, 50, found);
 	printf("found: %d\n", *found);
-	
+
 	free(arr);
 	free(found);
 	exit(EXIT_SUCCESS);
 }
-
