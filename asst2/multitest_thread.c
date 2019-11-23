@@ -21,10 +21,10 @@ typedef struct
 void* search_t(void* args)
 {
 	thread_info *thread = args;
-	int i, start, end;	
+	int i, start, end;
 	int* res = (int*)malloc(sizeof(int));
 	if( res == NULL)
-	{ 
+	{
 		fprintf(stderr, "%s\n", strerror(errno));
 		exit(EXIT_FAILURE);
 	}
@@ -50,6 +50,7 @@ void* search_t(void* args)
 void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 {
 	int workers = ceil((double)len/bites);
+  printf("Mode: Multithreading. - List Size: %d. - Chunk Size: %d. - # Processes: %d\n", len, bites, workers);
 	thread_info *threads = calloc(workers, sizeof(thread_info));
 	if(threads == NULL)
 	{ // mem allocation error
@@ -90,7 +91,7 @@ void dummy_search(int target, int* arr, int len, int bites, int* ifound)
 		tnum++;
 	}
 
-	free(res); 
+	free(res);
 	free(threads);
 	return;
 }

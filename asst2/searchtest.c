@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
     int minWorkers = (length + (250-1))/250;
     int iter;
     // Change maxIter if you want more or less iterations per testcase.
-    int maxIter = 3;
+    int maxIter = 5;
     long timeArray[maxIter];
     long currTime;
     gettimeofday(&start, NULL);
@@ -100,12 +100,19 @@ int main(int argc, char** argv) {
           gettimeofday(&start, NULL);
           search(62, array, length, chunkSize, found);
           gettimeofday(&stop, NULL);
+          // printf("found at %d\n", *found);
           currTime = (stop.tv_usec - start.tv_usec);
           timeArray[iter - 1] = currTime;
           sumOfTimes += currTime;
           if(currTime < minTime){minTime = currTime;}
           if(currTime > maxTime){maxTime = currTime;}
           printf("Time elapsed: %ld microseconds.\n", currTime);
+          int randomIndex = (rand() % length);
+          int intAtRandomIndex = array[randomIndex];
+          // printf("BEFORE - array[%d]: %d, array[%d]: %d\n", *found, array[*found], randomIndex, array[randomIndex]);
+          array[*found] = intAtRandomIndex;
+          array[randomIndex] = *found;
+          // printf("AFTER - array[%d]: %d, array[%d]: %d\n", *found, array[*found], randomIndex, array[randomIndex]);
         }
         avgTime = sumOfTimes/3;
         for(iter = 1; iter <= maxIter; iter++)
@@ -131,22 +138,28 @@ int main(int argc, char** argv) {
       //
       gettimeofday(&start, NULL);
       int index;
-      for(index = 0; index < length && index != -1; index++)
+      for(index = 0; index < length; index++)
       {
         if(array[index] == query)
         {
+          *found = index;
           index = length;
         }
       }
       gettimeofday(&stop, NULL);
+      // printf("found at %d\n", *found);
       currTime = (stop.tv_usec - start.tv_usec);
       timeArray[iter - 1] = currTime;
       sumOfTimes += currTime;
       if(currTime < minTime){minTime = currTime;}
       if(currTime > maxTime){maxTime = currTime;}
       printf("Time elapsed: %ld microseconds.\n", currTime);
+      int randomIndex = (rand() % length);
+      int intAtRandomIndex = array[randomIndex];
+      array[*found] = intAtRandomIndex;
+      array[randomIndex] = *found;
     };
-    avgTime = sumOfTimes/3;
+    avgTime = sumOfTimes/maxIter;
     for(iter = 1; iter <= maxIter; iter++)
     {
       stDev += pow((timeArray[iter - 1] - avgTime),2);

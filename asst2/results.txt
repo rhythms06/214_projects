@@ -1,0 +1,2052 @@
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 250. - # Processes: 1
+found at 62
+Time elapsed: 208 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 250. - # Processes: 1
+found at 222
+Time elapsed: 48 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 250. - # Processes: 1
+found at 222
+Time elapsed: 41 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 250. - # Processes: 1
+found at 222
+Time elapsed: 12 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 250. - # Processes: 1
+found at 222
+Time elapsed: 14 microseconds.
+Min: 12 us. - Max: 208 us. - Average: 107 us. - Standard Deviation: 46 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 125. - # Processes: 2
+found at 222
+Time elapsed: 24 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 125. - # Processes: 2
+found at 222
+Time elapsed: 15 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 125. - # Processes: 2
+found at 222
+Time elapsed: 33 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 125. - # Processes: 2
+found at 222
+Time elapsed: 65 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 125. - # Processes: 2
+found at 222
+Time elapsed: 24 microseconds.
+Min: 15 us. - Max: 65 us. - Average: 53 us. - Standard Deviation: 14 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 84. - # Processes: 3
+found at 222
+Time elapsed: 56 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 84. - # Processes: 3
+found at 222
+Time elapsed: 21 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 84. - # Processes: 3
+found at 222
+Time elapsed: 25 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 84. - # Processes: 3
+found at 222
+Time elapsed: 23 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 84. - # Processes: 3
+found at 222
+Time elapsed: 21 microseconds.
+Min: 21 us. - Max: 56 us. - Average: 48 us. - Standard Deviation: 13 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 63. - # Processes: 4
+found at 222
+Time elapsed: 33 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 63. - # Processes: 4
+found at 222
+Time elapsed: 27 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 63. - # Processes: 4
+found at 222
+Time elapsed: 22 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 63. - # Processes: 4
+found at 222
+Time elapsed: 25 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 63. - # Processes: 4
+found at 222
+Time elapsed: 23 microseconds.
+Min: 22 us. - Max: 33 us. - Average: 43 us. - Standard Deviation: 10 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 50. - # Processes: 5
+found at 222
+Time elapsed: 47 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 50. - # Processes: 5
+found at 222
+Time elapsed: 54 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 50. - # Processes: 5
+found at 222
+Time elapsed: 49 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 50. - # Processes: 5
+found at 222
+Time elapsed: 43 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 50. - # Processes: 5
+found at 222
+Time elapsed: 49 microseconds.
+Min: 43 us. - Max: 54 us. - Average: 80 us. - Standard Deviation: 15 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 42. - # Processes: 6
+found at 222
+Time elapsed: 62 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 42. - # Processes: 6
+found at 222
+Time elapsed: 61 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 42. - # Processes: 6
+found at 222
+Time elapsed: 60 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 42. - # Processes: 6
+found at 222
+Time elapsed: 59 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 42. - # Processes: 6
+found at 222
+Time elapsed: 59 microseconds.
+Min: 59 us. - Max: 62 us. - Average: 100 us. - Standard Deviation: 20 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 36. - # Processes: 7
+found at 222
+Time elapsed: 92 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 36. - # Processes: 7
+found at 222
+Time elapsed: 79 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 36. - # Processes: 7
+found at 222
+Time elapsed: 77 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 36. - # Processes: 7
+found at 222
+Time elapsed: 76 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 36. - # Processes: 7
+found at 222
+Time elapsed: 77 microseconds.
+Min: 76 us. - Max: 92 us. - Average: 133 us. - Standard Deviation: 28 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 32. - # Processes: 8
+found at 222
+Time elapsed: 85 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 32. - # Processes: 8
+found at 222
+Time elapsed: 97 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 32. - # Processes: 8
+found at 222
+Time elapsed: 93 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 32. - # Processes: 8
+found at 222
+Time elapsed: 101 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 32. - # Processes: 8
+found at 222
+Time elapsed: 94 microseconds.
+Min: 85 us. - Max: 101 us. - Average: 156 us. - Standard Deviation: 31 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 28. - # Processes: 9
+found at 222
+Time elapsed: 109 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 28. - # Processes: 9
+found at 222
+Time elapsed: 117 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 28. - # Processes: 9
+found at 222
+Time elapsed: 112 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 28. - # Processes: 9
+found at 222
+Time elapsed: 109 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 28. - # Processes: 9
+found at 222
+Time elapsed: 103 microseconds.
+Min: 103 us. - Max: 117 us. - Average: 183 us. - Standard Deviation: 40 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 25. - # Processes: 10
+found at 222
+Time elapsed: 120 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 25. - # Processes: 10
+found at 222
+Time elapsed: 120 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 25. - # Processes: 10
+found at 222
+Time elapsed: 117 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 25. - # Processes: 10
+found at 222
+Time elapsed: 117 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 250. - Chunk Size: 25. - # Processes: 10
+found at 222
+Time elapsed: 125 microseconds.
+Min: 117 us. - Max: 125 us. - Average: 199 us. - Standard Deviation: 37 us.
+Mode: Just one process. - List Size: 250.
+Iteration #1 out of 5.
+found at 37
+Time elapsed: 0 microseconds.
+Iteration #2 out of 5.
+found at 37
+Time elapsed: 0 microseconds.
+Iteration #3 out of 5.
+found at 37
+Time elapsed: 1 microseconds.
+Iteration #4 out of 5.
+found at 37
+Time elapsed: 1 microseconds.
+Iteration #5 out of 5.
+found at 37
+Time elapsed: 1 microseconds.
+Min: 0 us. - Max: 1 us. - Average: 0 us. - Standard Deviation: 0 ms.
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 150. - # Processes: 2
+found at 62
+Time elapsed: 89 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 150. - # Processes: 2
+found at 58
+Time elapsed: 83 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 150. - # Processes: 2
+found at 58
+Time elapsed: 94 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 150. - # Processes: 2
+found at 58
+Time elapsed: 79 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 150. - # Processes: 2
+found at 58
+Time elapsed: 86 microseconds.
+Min: 79 us. - Max: 94 us. - Average: 143 us. - Standard Deviation: 28 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 100. - # Processes: 3
+found at 58
+Time elapsed: 58 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 100. - # Processes: 3
+found at 58
+Time elapsed: 24 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 100. - # Processes: 3
+found at 58
+Time elapsed: 47 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 100. - # Processes: 3
+found at 58
+Time elapsed: 21 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 100. - # Processes: 3
+found at 58
+Time elapsed: 26 microseconds.
+Min: 21 us. - Max: 58 us. - Average: 58 us. - Standard Deviation: 16 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 75. - # Processes: 4
+found at 58
+Time elapsed: 27 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 75. - # Processes: 4
+found at 58
+Time elapsed: 27 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 75. - # Processes: 4
+found at 58
+Time elapsed: 27 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 75. - # Processes: 4
+found at 58
+Time elapsed: 25 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 75. - # Processes: 4
+found at 58
+Time elapsed: 26 microseconds.
+Min: 25 us. - Max: 27 us. - Average: 44 us. - Standard Deviation: 9 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 60. - # Processes: 5
+found at 58
+Time elapsed: 51 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 60. - # Processes: 5
+found at 58
+Time elapsed: 52 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 60. - # Processes: 5
+found at 58
+Time elapsed: 45 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 60. - # Processes: 5
+found at 58
+Time elapsed: 54 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 60. - # Processes: 5
+found at 58
+Time elapsed: 48 microseconds.
+Min: 45 us. - Max: 54 us. - Average: 83 us. - Standard Deviation: 17 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 50. - # Processes: 6
+found at 58
+Time elapsed: 64 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 50. - # Processes: 6
+found at 58
+Time elapsed: 63 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 50. - # Processes: 6
+found at 58
+Time elapsed: 59 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 50. - # Processes: 6
+found at 58
+Time elapsed: 59 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 50. - # Processes: 6
+found at 58
+Time elapsed: 60 microseconds.
+Min: 59 us. - Max: 64 us. - Average: 101 us. - Standard Deviation: 20 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 43. - # Processes: 7
+found at 58
+Time elapsed: 76 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 43. - # Processes: 7
+found at 58
+Time elapsed: 80 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 43. - # Processes: 7
+found at 58
+Time elapsed: 71 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 43. - # Processes: 7
+found at 58
+Time elapsed: 75 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 43. - # Processes: 7
+found at 58
+Time elapsed: 78 microseconds.
+Min: 71 us. - Max: 80 us. - Average: 126 us. - Standard Deviation: 24 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 38. - # Processes: 8
+found at 58
+Time elapsed: 94 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 38. - # Processes: 8
+found at 58
+Time elapsed: 100 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 38. - # Processes: 8
+found at 58
+Time elapsed: 93 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 38. - # Processes: 8
+found at 58
+Time elapsed: 98 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 38. - # Processes: 8
+found at 58
+Time elapsed: 94 microseconds.
+Min: 93 us. - Max: 100 us. - Average: 159 us. - Standard Deviation: 32 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 34. - # Processes: 9
+found at 58
+Time elapsed: 120 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 34. - # Processes: 9
+found at 58
+Time elapsed: 108 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 34. - # Processes: 9
+found at 58
+Time elapsed: 110 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 34. - # Processes: 9
+found at 58
+Time elapsed: 136 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 34. - # Processes: 9
+found at 58
+Time elapsed: 128 microseconds.
+Min: 108 us. - Max: 136 us. - Average: 200 us. - Standard Deviation: 36 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 30. - # Processes: 10
+found at 58
+Time elapsed: 162 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 30. - # Processes: 10
+found at 58
+Time elapsed: 130 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 30. - # Processes: 10
+found at 58
+Time elapsed: 118 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 30. - # Processes: 10
+found at 58
+Time elapsed: 120 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 30. - # Processes: 10
+found at 58
+Time elapsed: 119 microseconds.
+Min: 118 us. - Max: 162 us. - Average: 216 us. - Standard Deviation: 48 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 28. - # Processes: 11
+found at 58
+Time elapsed: 133 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 28. - # Processes: 11
+found at 58
+Time elapsed: 131 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 28. - # Processes: 11
+found at 58
+Time elapsed: 159 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 28. - # Processes: 11
+found at 58
+Time elapsed: 143 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 300. - Chunk Size: 28. - # Processes: 11
+found at 58
+Time elapsed: 162 microseconds.
+Min: 131 us. - Max: 162 us. - Average: 242 us. - Standard Deviation: 40 us.
+Mode: Just one process. - List Size: 300.
+Iteration #1 out of 5.
+found at 36
+Time elapsed: 0 microseconds.
+Iteration #2 out of 5.
+found at 36
+Time elapsed: 1 microseconds.
+Iteration #3 out of 5.
+found at 36
+Time elapsed: 1 microseconds.
+Iteration #4 out of 5.
+found at 36
+Time elapsed: 1 microseconds.
+Iteration #5 out of 5.
+found at 36
+Time elapsed: 1 microseconds.
+Min: 0 us. - Max: 1 us. - Average: 0 us. - Standard Deviation: 0 ms.
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 250. - # Processes: 2
+found at 105
+Time elapsed: 40 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 250. - # Processes: 2
+found at 105
+Time elapsed: 90 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 250. - # Processes: 2
+found at 105
+Time elapsed: 79 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 250. - # Processes: 2
+found at 105
+Time elapsed: 81 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 250. - # Processes: 2
+found at 105
+Time elapsed: 80 microseconds.
+Min: 40 us. - Max: 90 us. - Average: 123 us. - Standard Deviation: 21 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 167. - # Processes: 3
+found at 105
+Time elapsed: 91 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 167. - # Processes: 3
+found at 105
+Time elapsed: 78 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 167. - # Processes: 3
+found at 105
+Time elapsed: 81 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 167. - # Processes: 3
+found at 105
+Time elapsed: 43 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 167. - # Processes: 3
+found at 105
+Time elapsed: 19 microseconds.
+Min: 19 us. - Max: 91 us. - Average: 104 us. - Standard Deviation: 42 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 125. - # Processes: 4
+found at 105
+Time elapsed: 23 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 125. - # Processes: 4
+found at 105
+Time elapsed: 25 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 125. - # Processes: 4
+found at 105
+Time elapsed: 32 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 125. - # Processes: 4
+found at 105
+Time elapsed: 27 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 125. - # Processes: 4
+found at 105
+Time elapsed: 28 microseconds.
+Min: 23 us. - Max: 32 us. - Average: 45 us. - Standard Deviation: 8 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 100. - # Processes: 5
+found at 105
+Time elapsed: 49 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 100. - # Processes: 5
+found at 105
+Time elapsed: 47 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 100. - # Processes: 5
+found at 105
+Time elapsed: 46 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 100. - # Processes: 5
+found at 105
+Time elapsed: 57 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 100. - # Processes: 5
+found at 105
+Time elapsed: 44 microseconds.
+Min: 44 us. - Max: 57 us. - Average: 81 us. - Standard Deviation: 18 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 84. - # Processes: 6
+found at 105
+Time elapsed: 61 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 84. - # Processes: 6
+found at 105
+Time elapsed: 62 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 84. - # Processes: 6
+found at 105
+Time elapsed: 62 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 84. - # Processes: 6
+found at 105
+Time elapsed: 59 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 84. - # Processes: 6
+found at 105
+Time elapsed: 55 microseconds.
+Min: 55 us. - Max: 62 us. - Average: 99 us. - Standard Deviation: 22 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 72. - # Processes: 7
+found at 105
+Time elapsed: 80 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 72. - # Processes: 7
+found at 105
+Time elapsed: 79 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 72. - # Processes: 7
+found at 105
+Time elapsed: 77 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 72. - # Processes: 7
+found at 105
+Time elapsed: 81 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 72. - # Processes: 7
+found at 105
+Time elapsed: 75 microseconds.
+Min: 75 us. - Max: 81 us. - Average: 130 us. - Standard Deviation: 27 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 63. - # Processes: 8
+found at 105
+Time elapsed: 99 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 63. - # Processes: 8
+found at 105
+Time elapsed: 94 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 63. - # Processes: 8
+found at 105
+Time elapsed: 100 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 63. - # Processes: 8
+found at 105
+Time elapsed: 91 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 63. - # Processes: 8
+found at 105
+Time elapsed: 93 microseconds.
+Min: 91 us. - Max: 100 us. - Average: 159 us. - Standard Deviation: 33 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 56. - # Processes: 9
+found at 105
+Time elapsed: 102 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 56. - # Processes: 9
+found at 105
+Time elapsed: 111 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 56. - # Processes: 9
+found at 105
+Time elapsed: 110 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 56. - # Processes: 9
+found at 105
+Time elapsed: 109 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 56. - # Processes: 9
+found at 105
+Time elapsed: 111 microseconds.
+Min: 102 us. - Max: 111 us. - Average: 181 us. - Standard Deviation: 35 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 50. - # Processes: 10
+found at 105
+Time elapsed: 114 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 50. - # Processes: 10
+found at 105
+Time elapsed: 129 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 50. - # Processes: 10
+found at 105
+Time elapsed: 119 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 50. - # Processes: 10
+found at 105
+Time elapsed: 116 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 50. - # Processes: 10
+found at 105
+Time elapsed: 119 microseconds.
+Min: 114 us. - Max: 129 us. - Average: 199 us. - Standard Deviation: 40 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 46. - # Processes: 11
+found at 105
+Time elapsed: 134 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 46. - # Processes: 11
+found at 105
+Time elapsed: 148 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 46. - # Processes: 11
+found at 105
+Time elapsed: 122 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 46. - # Processes: 11
+found at 105
+Time elapsed: 134 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 500. - Chunk Size: 46. - # Processes: 11
+found at 105
+Time elapsed: 140 microseconds.
+Min: 122 us. - Max: 148 us. - Average: 226 us. - Standard Deviation: 43 us.
+Mode: Just one process. - List Size: 500.
+Iteration #1 out of 5.
+found at 275
+Time elapsed: 1 microseconds.
+Iteration #2 out of 5.
+found at 275
+Time elapsed: 1 microseconds.
+Iteration #3 out of 5.
+found at 275
+Time elapsed: 1 microseconds.
+Iteration #4 out of 5.
+found at 275
+Time elapsed: 1 microseconds.
+Iteration #5 out of 5.
+found at 275
+Time elapsed: 1 microseconds.
+Min: 1 us. - Max: 1 us. - Average: 1 us. - Standard Deviation: 0 ms.
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 250. - # Processes: 4
+found at 927
+Time elapsed: 84 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 250. - # Processes: 4
+found at 927
+Time elapsed: 81 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 250. - # Processes: 4
+found at 927
+Time elapsed: 69 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 250. - # Processes: 4
+found at 927
+Time elapsed: 71 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 250. - # Processes: 4
+found at 927
+Time elapsed: 44 microseconds.
+Min: 44 us. - Max: 84 us. - Average: 116 us. - Standard Deviation: 36 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 200. - # Processes: 5
+found at 927
+Time elapsed: 51 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 200. - # Processes: 5
+found at 927
+Time elapsed: 61 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 200. - # Processes: 5
+found at 927
+Time elapsed: 54 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 200. - # Processes: 5
+found at 927
+Time elapsed: 49 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 200. - # Processes: 5
+found at 927
+Time elapsed: 46 microseconds.
+Min: 46 us. - Max: 61 us. - Average: 87 us. - Standard Deviation: 20 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 167. - # Processes: 6
+found at 927
+Time elapsed: 62 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 167. - # Processes: 6
+found at 927
+Time elapsed: 62 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 167. - # Processes: 6
+found at 927
+Time elapsed: 69 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 167. - # Processes: 6
+found at 927
+Time elapsed: 67 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 167. - # Processes: 6
+found at 927
+Time elapsed: 60 microseconds.
+Min: 60 us. - Max: 69 us. - Average: 106 us. - Standard Deviation: 23 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 143. - # Processes: 7
+found at 927
+Time elapsed: 79 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 143. - # Processes: 7
+found at 927
+Time elapsed: 98 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 143. - # Processes: 7
+found at 927
+Time elapsed: 81 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 143. - # Processes: 7
+found at 927
+Time elapsed: 87 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 143. - # Processes: 7
+found at 927
+Time elapsed: 97 microseconds.
+Min: 79 us. - Max: 98 us. - Average: 147 us. - Standard Deviation: 25 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 125. - # Processes: 8
+found at 927
+Time elapsed: 111 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 125. - # Processes: 8
+found at 927
+Time elapsed: 100 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 125. - # Processes: 8
+found at 927
+Time elapsed: 96 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 125. - # Processes: 8
+found at 927
+Time elapsed: 93 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 125. - # Processes: 8
+found at 927
+Time elapsed: 106 microseconds.
+Min: 93 us. - Max: 111 us. - Average: 168 us. - Standard Deviation: 31 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 112. - # Processes: 9
+found at 927
+Time elapsed: 120 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 112. - # Processes: 9
+found at 927
+Time elapsed: 129 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 112. - # Processes: 9
+found at 927
+Time elapsed: 110 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 112. - # Processes: 9
+found at 927
+Time elapsed: 112 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 112. - # Processes: 9
+found at 927
+Time elapsed: 102 microseconds.
+Min: 102 us. - Max: 129 us. - Average: 191 us. - Standard Deviation: 44 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 100. - # Processes: 10
+found at 927
+Time elapsed: 114 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 100. - # Processes: 10
+found at 927
+Time elapsed: 115 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 100. - # Processes: 10
+found at 927
+Time elapsed: 119 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 100. - # Processes: 10
+found at 927
+Time elapsed: 127 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 100. - # Processes: 10
+found at 927
+Time elapsed: 136 microseconds.
+Min: 114 us. - Max: 136 us. - Average: 203 us. - Standard Deviation: 33 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 91. - # Processes: 11
+found at 927
+Time elapsed: 140 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 91. - # Processes: 11
+found at 927
+Time elapsed: 144 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 91. - # Processes: 11
+found at 927
+Time elapsed: 136 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 91. - # Processes: 11
+found at 927
+Time elapsed: 143 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 91. - # Processes: 11
+found at 927
+Time elapsed: 133 microseconds.
+Min: 133 us. - Max: 144 us. - Average: 232 us. - Standard Deviation: 49 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 84. - # Processes: 12
+found at 927
+Time elapsed: 171 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 84. - # Processes: 12
+found at 927
+Time elapsed: 149 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 84. - # Processes: 12
+found at 927
+Time elapsed: 156 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 84. - # Processes: 12
+found at 927
+Time elapsed: 154 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 84. - # Processes: 12
+found at 927
+Time elapsed: 152 microseconds.
+Min: 149 us. - Max: 171 us. - Average: 260 us. - Standard Deviation: 54 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 77. - # Processes: 13
+found at 927
+Time elapsed: 156 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 77. - # Processes: 13
+found at 927
+Time elapsed: 166 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 77. - # Processes: 13
+found at 927
+Time elapsed: 163 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 77. - # Processes: 13
+found at 927
+Time elapsed: 164 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 1000. - Chunk Size: 77. - # Processes: 13
+found at 927
+Time elapsed: 5604 microseconds.
+Min: 156 us. - Max: 5604 us. - Average: 2084 us. - Standard Deviation: 1760 us.
+Mode: Just one process. - List Size: 1000.
+Iteration #1 out of 5.
+found at 138
+Time elapsed: 0 microseconds.
+Iteration #2 out of 5.
+found at 138
+Time elapsed: 7 microseconds.
+Iteration #3 out of 5.
+found at 138
+Time elapsed: 2 microseconds.
+Iteration #4 out of 5.
+found at 138
+Time elapsed: 2 microseconds.
+Iteration #5 out of 5.
+found at 138
+Time elapsed: 2 microseconds.
+Min: 0 us. - Max: 7 us. - Average: 2 us. - Standard Deviation: 0 ms.
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 250. - # Processes: 8
+found at 1627
+Time elapsed: 123 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 250. - # Processes: 8
+found at 1627
+Time elapsed: 82 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 250. - # Processes: 8
+found at 1627
+Time elapsed: 79 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 250. - # Processes: 8
+found at 1627
+Time elapsed: 90 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 250. - # Processes: 8
+found at 1627
+Time elapsed: 81 microseconds.
+Min: 79 us. - Max: 123 us. - Average: 151 us. - Standard Deviation: 35 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 223. - # Processes: 9
+found at 1627
+Time elapsed: 99 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 223. - # Processes: 9
+found at 1627
+Time elapsed: 109 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 223. - # Processes: 9
+found at 1627
+Time elapsed: 99 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 223. - # Processes: 9
+found at 1627
+Time elapsed: 106 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 223. - # Processes: 9
+found at 1627
+Time elapsed: 118 microseconds.
+Min: 99 us. - Max: 118 us. - Average: 177 us. - Standard Deviation: 29 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 200. - # Processes: 10
+found at 1627
+Time elapsed: 121 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 200. - # Processes: 10
+found at 1627
+Time elapsed: 120 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 200. - # Processes: 10
+found at 1627
+Time elapsed: 121 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 200. - # Processes: 10
+found at 1627
+Time elapsed: 115 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 200. - # Processes: 10
+found at 1627
+Time elapsed: 111 microseconds.
+Min: 111 us. - Max: 121 us. - Average: 196 us. - Standard Deviation: 42 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 182. - # Processes: 11
+found at 1627
+Time elapsed: 134 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 182. - # Processes: 11
+found at 1627
+Time elapsed: 134 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 182. - # Processes: 11
+found at 1627
+Time elapsed: 138 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 182. - # Processes: 11
+found at 1627
+Time elapsed: 133 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 182. - # Processes: 11
+found at 1627
+Time elapsed: 124 microseconds.
+Min: 124 us. - Max: 138 us. - Average: 221 us. - Standard Deviation: 48 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 167. - # Processes: 12
+found at 1627
+Time elapsed: 152 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 167. - # Processes: 12
+found at 1627
+Time elapsed: 138 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 167. - # Processes: 12
+found at 1627
+Time elapsed: 145 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 167. - # Processes: 12
+found at 1627
+Time elapsed: 141 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 167. - # Processes: 12
+found at 1627
+Time elapsed: 150 microseconds.
+Min: 138 us. - Max: 152 us. - Average: 242 us. - Standard Deviation: 46 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 154. - # Processes: 13
+found at 1627
+Time elapsed: 157 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 154. - # Processes: 13
+found at 1627
+Time elapsed: 161 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 154. - # Processes: 13
+found at 1627
+Time elapsed: 154 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 154. - # Processes: 13
+found at 1627
+Time elapsed: 170 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 154. - # Processes: 13
+found at 1627
+Time elapsed: 156 microseconds.
+Min: 154 us. - Max: 170 us. - Average: 266 us. - Standard Deviation: 55 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 143. - # Processes: 14
+found at 1627
+Time elapsed: 178 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 143. - # Processes: 14
+found at 1627
+Time elapsed: 170 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 143. - # Processes: 14
+found at 1627
+Time elapsed: 178 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 143. - # Processes: 14
+found at 1627
+Time elapsed: 169 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 143. - # Processes: 14
+found at 1627
+Time elapsed: 174 microseconds.
+Min: 169 us. - Max: 178 us. - Average: 289 us. - Standard Deviation: 57 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 134. - # Processes: 15
+found at 1627
+Time elapsed: 181 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 134. - # Processes: 15
+found at 1627
+Time elapsed: 188 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 134. - # Processes: 15
+found at 1627
+Time elapsed: 185 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 134. - # Processes: 15
+found at 1627
+Time elapsed: 188 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 134. - # Processes: 15
+found at 1627
+Time elapsed: 208 microseconds.
+Min: 181 us. - Max: 208 us. - Average: 316 us. - Standard Deviation: 54 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 125. - # Processes: 16
+found at 1627
+Time elapsed: 211 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 125. - # Processes: 16
+found at 1627
+Time elapsed: 203 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 125. - # Processes: 16
+found at 1627
+Time elapsed: 200 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 125. - # Processes: 16
+found at 1627
+Time elapsed: 198 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 125. - # Processes: 16
+found at 1627
+Time elapsed: 200 microseconds.
+Min: 198 us. - Max: 211 us. - Average: 337 us. - Standard Deviation: 68 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 118. - # Processes: 17
+found at 1627
+Time elapsed: 212 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 118. - # Processes: 17
+found at 1627
+Time elapsed: 225 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 118. - # Processes: 17
+found at 1627
+Time elapsed: 338 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 118. - # Processes: 17
+found at 1627
+Time elapsed: 236 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 2000. - Chunk Size: 118. - # Processes: 17
+found at 1627
+Time elapsed: 227 microseconds.
+Min: 212 us. - Max: 338 us. - Average: 412 us. - Standard Deviation: 92 us.
+Mode: Just one process. - List Size: 2000.
+Iteration #1 out of 5.
+found at 314
+Time elapsed: 0 microseconds.
+Iteration #2 out of 5.
+found at 314
+Time elapsed: 4 microseconds.
+Iteration #3 out of 5.
+found at 314
+Time elapsed: 4 microseconds.
+Iteration #4 out of 5.
+found at 314
+Time elapsed: 4 microseconds.
+Iteration #5 out of 5.
+found at 314
+Time elapsed: 4 microseconds.
+Min: 0 us. - Max: 4 us. - Average: 3 us. - Standard Deviation: 0 ms.
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 250. - # Processes: 16
+found at 3432
+Time elapsed: 207 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 250. - # Processes: 16
+found at 3432
+Time elapsed: 204 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 250. - # Processes: 16
+found at 3432
+Time elapsed: 218 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 250. - # Processes: 16
+found at 3432
+Time elapsed: 200 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 250. - # Processes: 16
+found at 3432
+Time elapsed: 200 microseconds.
+Min: 200 us. - Max: 218 us. - Average: 343 us. - Standard Deviation: 71 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 236. - # Processes: 17
+found at 3432
+Time elapsed: 216 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 236. - # Processes: 17
+found at 3432
+Time elapsed: 230 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 236. - # Processes: 17
+found at 3432
+Time elapsed: 230 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 236. - # Processes: 17
+found at 3432
+Time elapsed: 216 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 236. - # Processes: 17
+found at 3432
+Time elapsed: 221 microseconds.
+Min: 216 us. - Max: 230 us. - Average: 371 us. - Standard Deviation: 75 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 223. - # Processes: 18
+found at 3432
+Time elapsed: 235 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 223. - # Processes: 18
+found at 3432
+Time elapsed: 245 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 223. - # Processes: 18
+found at 3432
+Time elapsed: 231 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 223. - # Processes: 18
+found at 3432
+Time elapsed: 234 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 223. - # Processes: 18
+found at 3432
+Time elapsed: 238 microseconds.
+Min: 231 us. - Max: 245 us. - Average: 394 us. - Standard Deviation: 78 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 211. - # Processes: 19
+found at 3432
+Time elapsed: 249 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 211. - # Processes: 19
+found at 3432
+Time elapsed: 255 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 211. - # Processes: 19
+found at 3432
+Time elapsed: 254 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 211. - # Processes: 19
+found at 3432
+Time elapsed: 248 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 211. - # Processes: 19
+found at 3432
+Time elapsed: 247 microseconds.
+Min: 247 us. - Max: 255 us. - Average: 417 us. - Standard Deviation: 85 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 200. - # Processes: 20
+found at 3432
+Time elapsed: 270 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 200. - # Processes: 20
+found at 3432
+Time elapsed: 263 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 200. - # Processes: 20
+found at 3432
+Time elapsed: 281 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 200. - # Processes: 20
+found at 3432
+Time elapsed: 303 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 200. - # Processes: 20
+found at 3432
+Time elapsed: 274 microseconds.
+Min: 263 us. - Max: 303 us. - Average: 463 us. - Standard Deviation: 94 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 191. - # Processes: 21
+found at 3432
+Time elapsed: 277 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 191. - # Processes: 21
+found at 3432
+Time elapsed: 282 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 191. - # Processes: 21
+found at 3432
+Time elapsed: 295 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 191. - # Processes: 21
+found at 3432
+Time elapsed: 284 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 191. - # Processes: 21
+found at 3432
+Time elapsed: 283 microseconds.
+Min: 277 us. - Max: 295 us. - Average: 473 us. - Standard Deviation: 95 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 182. - # Processes: 22
+found at 3432
+Time elapsed: 370 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 182. - # Processes: 22
+found at 3432
+Time elapsed: 316 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 182. - # Processes: 22
+found at 3432
+Time elapsed: 325 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 182. - # Processes: 22
+found at 3432
+Time elapsed: 306 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 182. - # Processes: 22
+found at 3432
+Time elapsed: 293 microseconds.
+Min: 293 us. - Max: 370 us. - Average: 536 us. - Standard Deviation: 121 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 174. - # Processes: 23
+found at 3432
+Time elapsed: 337 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 174. - # Processes: 23
+found at 3432
+Time elapsed: 309 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 174. - # Processes: 23
+found at 3432
+Time elapsed: 337 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 174. - # Processes: 23
+found at 3432
+Time elapsed: 315 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 174. - # Processes: 23
+found at 3432
+Time elapsed: 313 microseconds.
+Min: 309 us. - Max: 337 us. - Average: 537 us. - Standard Deviation: 112 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 167. - # Processes: 24
+found at 3432
+Time elapsed: 323 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 167. - # Processes: 24
+found at 3432
+Time elapsed: 316 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 167. - # Processes: 24
+found at 3432
+Time elapsed: 330 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 167. - # Processes: 24
+found at 3432
+Time elapsed: 321 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 167. - # Processes: 24
+found at 3432
+Time elapsed: 311 microseconds.
+Min: 311 us. - Max: 330 us. - Average: 533 us. - Standard Deviation: 111 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 160. - # Processes: 25
+found at 3432
+Time elapsed: 357 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 160. - # Processes: 25
+found at 3432
+Time elapsed: 358 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 160. - # Processes: 25
+found at 3432
+Time elapsed: 1215 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 160. - # Processes: 25
+found at 3432
+Time elapsed: 340 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 4000. - Chunk Size: 160. - # Processes: 25
+found at 3432
+Time elapsed: 349 microseconds.
+Min: 340 us. - Max: 1215 us. - Average: 873 us. - Standard Deviation: 262 us.
+Mode: Just one process. - List Size: 4000.
+Iteration #1 out of 5.
+found at 3525
+Time elapsed: 8 microseconds.
+Iteration #2 out of 5.
+found at 3525
+Time elapsed: 8 microseconds.
+Iteration #3 out of 5.
+found at 3525
+Time elapsed: 8 microseconds.
+Iteration #4 out of 5.
+found at 3525
+Time elapsed: 8 microseconds.
+Iteration #5 out of 5.
+found at 3525
+Time elapsed: 8 microseconds.
+Min: 8 us. - Max: 8 us. - Average: 8 us. - Standard Deviation: 0 ms.
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 250. - # Processes: 32
+found at 4621
+Time elapsed: 539 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 250. - # Processes: 32
+found at 4621
+Time elapsed: 556 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 250. - # Processes: 32
+found at 4621
+Time elapsed: 542 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 250. - # Processes: 32
+found at 4621
+Time elapsed: 473 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 250. - # Processes: 32
+found at 4621
+Time elapsed: 448 microseconds.
+Min: 448 us. - Max: 556 us. - Average: 852 us. - Standard Deviation: 202 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 243. - # Processes: 33
+found at 4621
+Time elapsed: 481 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 243. - # Processes: 33
+found at 4621
+Time elapsed: 473 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 243. - # Processes: 33
+found at 4621
+Time elapsed: 1909 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 243. - # Processes: 33
+found at 4621
+Time elapsed: 622 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 243. - # Processes: 33
+found at 4621
+Time elapsed: 541 microseconds.
+Min: 473 us. - Max: 1909 us. - Average: 1342 us. - Standard Deviation: 400 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 236. - # Processes: 34
+found at 4621
+Time elapsed: 621 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 236. - # Processes: 34
+found at 4621
+Time elapsed: 644 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 236. - # Processes: 34
+found at 4621
+Time elapsed: 582 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 236. - # Processes: 34
+found at 4621
+Time elapsed: 541 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 236. - # Processes: 34
+found at 4621
+Time elapsed: 561 microseconds.
+Min: 541 us. - Max: 644 us. - Average: 983 us. - Standard Deviation: 211 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 229. - # Processes: 35
+found at 4621
+Time elapsed: 576 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 229. - # Processes: 35
+found at 4621
+Time elapsed: 583 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 229. - # Processes: 35
+found at 4621
+Time elapsed: 606 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 229. - # Processes: 35
+found at 4621
+Time elapsed: 586 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 229. - # Processes: 35
+found at 4621
+Time elapsed: 641 microseconds.
+Min: 576 us. - Max: 641 us. - Average: 997 us. - Standard Deviation: 178 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 223. - # Processes: 36
+found at 4621
+Time elapsed: 570 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 223. - # Processes: 36
+found at 4621
+Time elapsed: 610 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 223. - # Processes: 36
+found at 4621
+Time elapsed: 630 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 223. - # Processes: 36
+found at 4621
+Time elapsed: 628 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 223. - # Processes: 36
+found at 4621
+Time elapsed: 601 microseconds.
+Min: 570 us. - Max: 630 us. - Average: 1013 us. - Standard Deviation: 206 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 217. - # Processes: 37
+found at 4621
+Time elapsed: 613 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 217. - # Processes: 37
+found at 4621
+Time elapsed: 607 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 217. - # Processes: 37
+found at 4621
+Time elapsed: 662 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 217. - # Processes: 37
+found at 4621
+Time elapsed: 580 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 217. - # Processes: 37
+found at 4621
+Time elapsed: 606 microseconds.
+Min: 580 us. - Max: 662 us. - Average: 1022 us. - Standard Deviation: 208 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 211. - # Processes: 38
+found at 4621
+Time elapsed: 628 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 211. - # Processes: 38
+found at 4621
+Time elapsed: 630 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 211. - # Processes: 38
+found at 4621
+Time elapsed: 846 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 211. - # Processes: 38
+found at 4621
+Time elapsed: 674 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 211. - # Processes: 38
+found at 4621
+Time elapsed: 616 microseconds.
+Min: 616 us. - Max: 846 us. - Average: 1131 us. - Standard Deviation: 257 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 206. - # Processes: 39
+found at 4621
+Time elapsed: 633 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 206. - # Processes: 39
+found at 4621
+Time elapsed: 679 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 206. - # Processes: 39
+found at 4621
+Time elapsed: 618 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 206. - # Processes: 39
+found at 4621
+Time elapsed: 633 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 206. - # Processes: 39
+found at 4621
+Time elapsed: 639 microseconds.
+Min: 618 us. - Max: 679 us. - Average: 1067 us. - Standard Deviation: 214 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 200. - # Processes: 40
+found at 4621
+Time elapsed: 787 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 200. - # Processes: 40
+found at 4621
+Time elapsed: 567 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 200. - # Processes: 40
+found at 4621
+Time elapsed: 4564 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 200. - # Processes: 40
+found at 4621
+Time elapsed: 583 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 200. - # Processes: 40
+found at 4621
+Time elapsed: 637 microseconds.
+Min: 567 us. - Max: 4564 us. - Average: 2379 us. - Standard Deviation: 871 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 196. - # Processes: 41
+found at 4621
+Time elapsed: 605 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 196. - # Processes: 41
+found at 4621
+Time elapsed: 613 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 196. - # Processes: 41
+found at 4621
+Time elapsed: 699 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 196. - # Processes: 41
+found at 4621
+Time elapsed: 600 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 8000. - Chunk Size: 196. - # Processes: 41
+found at 4621
+Time elapsed: 608 microseconds.
+Min: 600 us. - Max: 699 us. - Average: 1041 us. - Standard Deviation: 216 us.
+Mode: Just one process. - List Size: 8000.
+Iteration #1 out of 5.
+found at 2250
+Time elapsed: 5 microseconds.
+Iteration #2 out of 5.
+found at 2250
+Time elapsed: 16 microseconds.
+Iteration #3 out of 5.
+found at 2250
+Time elapsed: 16 microseconds.
+Iteration #4 out of 5.
+found at 2250
+Time elapsed: 16 microseconds.
+Iteration #5 out of 5.
+found at 2250
+Time elapsed: 16 microseconds.
+Min: 5 us. - Max: 16 us. - Average: 13 us. - Standard Deviation: 1 ms.
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 250. - # Processes: 64
+found at 8303
+Time elapsed: 1037 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 250. - # Processes: 64
+found at 8303
+Time elapsed: 1135 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 250. - # Processes: 64
+found at 8303
+Time elapsed: 1158 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 250. - # Processes: 64
+found at 8303
+Time elapsed: 1090 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 250. - # Processes: 64
+found at 8303
+Time elapsed: 1119 microseconds.
+Min: 1037 us. - Max: 1158 us. - Average: 1846 us. - Standard Deviation: 363 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 247. - # Processes: 65
+found at 8303
+Time elapsed: 1109 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 247. - # Processes: 65
+found at 8303
+Time elapsed: 1085 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 247. - # Processes: 65
+found at 8303
+Time elapsed: 1076 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 247. - # Processes: 65
+found at 8303
+Time elapsed: 1047 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 247. - # Processes: 65
+found at 8303
+Time elapsed: 1105 microseconds.
+Min: 1047 us. - Max: 1109 us. - Average: 1807 us. - Standard Deviation: 351 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 243. - # Processes: 66
+found at 8303
+Time elapsed: 1123 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 243. - # Processes: 66
+found at 8303
+Time elapsed: 1105 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 243. - # Processes: 66
+found at 8303
+Time elapsed: 1110 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 243. - # Processes: 66
+found at 8303
+Time elapsed: 1095 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 243. - # Processes: 66
+found at 8303
+Time elapsed: 1080 microseconds.
+Min: 1080 us. - Max: 1123 us. - Average: 1837 us. - Standard Deviation: 378 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 239. - # Processes: 67
+found at 8303
+Time elapsed: 1138 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 239. - # Processes: 67
+found at 8303
+Time elapsed: 1042 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 239. - # Processes: 67
+found at 8303
+Time elapsed: 1055 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 239. - # Processes: 67
+found at 8303
+Time elapsed: 983 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 239. - # Processes: 67
+found at 8303
+Time elapsed: 987 microseconds.
+Min: 983 us. - Max: 1138 us. - Average: 1735 us. - Standard Deviation: 374 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 236. - # Processes: 68
+found at 8303
+Time elapsed: 1022 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 236. - # Processes: 68
+found at 8303
+Time elapsed: 1034 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 236. - # Processes: 68
+found at 8303
+Time elapsed: 1009 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 236. - # Processes: 68
+found at 8303
+Time elapsed: 997 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 236. - # Processes: 68
+found at 8303
+Time elapsed: 1253 microseconds.
+Min: 997 us. - Max: 1253 us. - Average: 1771 us. - Standard Deviation: 259 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 232. - # Processes: 69
+found at 8303
+Time elapsed: 1017 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 232. - # Processes: 69
+found at 8303
+Time elapsed: 1036 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 232. - # Processes: 69
+found at 8303
+Time elapsed: 1167 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 232. - # Processes: 69
+found at 8303
+Time elapsed: 1209 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 232. - # Processes: 69
+found at 8303
+Time elapsed: 1111 microseconds.
+Min: 1017 us. - Max: 1209 us. - Average: 1846 us. - Standard Deviation: 367 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 229. - # Processes: 70
+found at 8303
+Time elapsed: 1127 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 229. - # Processes: 70
+found at 8303
+Time elapsed: 1173 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 229. - # Processes: 70
+found at 8303
+Time elapsed: 1091 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 229. - # Processes: 70
+found at 8303
+Time elapsed: 980 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 229. - # Processes: 70
+found at 8303
+Time elapsed: 1133 microseconds.
+Min: 980 us. - Max: 1173 us. - Average: 1834 us. - Standard Deviation: 350 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 226. - # Processes: 71
+found at 8303
+Time elapsed: 1075 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 226. - # Processes: 71
+found at 8303
+Time elapsed: 1072 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 226. - # Processes: 71
+found at 8303
+Time elapsed: 1074 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 226. - # Processes: 71
+found at 8303
+Time elapsed: 1168 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 226. - # Processes: 71
+found at 8303
+Time elapsed: 5072 microseconds.
+Min: 1072 us. - Max: 5072 us. - Average: 3153 us. - Standard Deviation: 959 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 223. - # Processes: 72
+found at 8303
+Time elapsed: 1318 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 223. - # Processes: 72
+found at 8303
+Time elapsed: 1306 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 223. - # Processes: 72
+found at 8303
+Time elapsed: 1453 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 223. - # Processes: 72
+found at 8303
+Time elapsed: 1114 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 223. - # Processes: 72
+found at 8303
+Time elapsed: 1292 microseconds.
+Min: 1114 us. - Max: 1453 us. - Average: 2161 us. - Standard Deviation: 434 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 220. - # Processes: 73
+found at 8303
+Time elapsed: 7325 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 220. - # Processes: 73
+found at 8303
+Time elapsed: 1691 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 220. - # Processes: 73
+found at 8303
+Time elapsed: 1258 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 220. - # Processes: 73
+found at 8303
+Time elapsed: 1418 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 16000. - Chunk Size: 220. - # Processes: 73
+found at 8303
+Time elapsed: 3821 microseconds.
+Min: 1258 us. - Max: 7325 us. - Average: 5171 us. - Standard Deviation: 675 us.
+Mode: Just one process. - List Size: 16000.
+Iteration #1 out of 5.
+found at 6394
+Time elapsed: 58 microseconds.
+Iteration #2 out of 5.
+found at 6394
+Time elapsed: 31 microseconds.
+Iteration #3 out of 5.
+found at 6394
+Time elapsed: 31 microseconds.
+Iteration #4 out of 5.
+found at 6394
+Time elapsed: 31 microseconds.
+Iteration #5 out of 5.
+found at 6394
+Time elapsed: 31 microseconds.
+Min: 31 us. - Max: 58 us. - Average: 36 us. - Standard Deviation: 2 ms.
+Query: 63.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 250. - # Processes: 128
+found at 8809
+Time elapsed: 17470 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 250. - # Processes: 128
+found at 8809
+Time elapsed: 7555 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 250. - # Processes: 128
+found at 8809
+Time elapsed: -978305 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 250. - # Processes: 128
+found at 8809
+Time elapsed: 5485 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 250. - # Processes: 128
+found at 8809
+Time elapsed: 15054 microseconds.
+Min: -978305 us. - Max: 17470 us. - Average: -310913 us. - Standard Deviation: 162983 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 249. - # Processes: 129
+found at 8809
+Time elapsed: 5394 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 249. - # Processes: 129
+found at 8809
+Time elapsed: 4615 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 249. - # Processes: 129
+found at 8809
+Time elapsed: 3976 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 249. - # Processes: 129
+found at 8809
+Time elapsed: 2575 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 249. - # Processes: 129
+found at 8809
+Time elapsed: 2662 microseconds.
+Min: 2575 us. - Max: 5394 us. - Average: 6407 us. - Standard Deviation: 1872 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 247. - # Processes: 130
+found at 8809
+Time elapsed: 2430 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 247. - # Processes: 130
+found at 8809
+Time elapsed: 3444 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 247. - # Processes: 130
+found at 8809
+Time elapsed: 2449 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 247. - # Processes: 130
+found at 8809
+Time elapsed: 2169 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 247. - # Processes: 130
+found at 8809
+Time elapsed: 2486 microseconds.
+Min: 2169 us. - Max: 3444 us. - Average: 4326 us. - Standard Deviation: 920 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 245. - # Processes: 131
+found at 8809
+Time elapsed: 2515 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 245. - # Processes: 131
+found at 8809
+Time elapsed: 2039 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 245. - # Processes: 131
+found at 8809
+Time elapsed: 2181 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 245. - # Processes: 131
+found at 8809
+Time elapsed: 2157 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 245. - # Processes: 131
+found at 8809
+Time elapsed: 2743 microseconds.
+Min: 2039 us. - Max: 2743 us. - Average: 3878 us. - Standard Deviation: 567 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 243. - # Processes: 132
+found at 8809
+Time elapsed: 2202 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 243. - # Processes: 132
+found at 8809
+Time elapsed: 1796 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 243. - # Processes: 132
+found at 8809
+Time elapsed: 2651 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 243. - # Processes: 132
+found at 8809
+Time elapsed: 2386 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 243. - # Processes: 132
+found at 8809
+Time elapsed: 2201 microseconds.
+Min: 1796 us. - Max: 2651 us. - Average: 3745 us. - Standard Deviation: 772 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 241. - # Processes: 133
+found at 8809
+Time elapsed: 2308 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 241. - # Processes: 133
+found at 8809
+Time elapsed: 2305 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 241. - # Processes: 133
+found at 8809
+Time elapsed: 2099 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 241. - # Processes: 133
+found at 8809
+Time elapsed: 2234 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 241. - # Processes: 133
+found at 8809
+Time elapsed: 2168 microseconds.
+Min: 2099 us. - Max: 2308 us. - Average: 3704 us. - Standard Deviation: 768 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 239. - # Processes: 134
+found at 8809
+Time elapsed: 2241 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 239. - # Processes: 134
+found at 8809
+Time elapsed: 2174 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 239. - # Processes: 134
+found at 8809
+Time elapsed: 2157 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 239. - # Processes: 134
+found at 8809
+Time elapsed: 2130 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 239. - # Processes: 134
+found at 8809
+Time elapsed: 2422 microseconds.
+Min: 2130 us. - Max: 2422 us. - Average: 3708 us. - Standard Deviation: 643 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 238. - # Processes: 135
+found at 8809
+Time elapsed: 3570 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 238. - # Processes: 135
+found at 8809
+Time elapsed: 2183 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 238. - # Processes: 135
+found at 8809
+Time elapsed: 2500 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 238. - # Processes: 135
+found at 8809
+Time elapsed: 2510 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 238. - # Processes: 135
+found at 8809
+Time elapsed: 2486 microseconds.
+Min: 2183 us. - Max: 3570 us. - Average: 4416 us. - Standard Deviation: 965 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 236. - # Processes: 136
+found at 8809
+Time elapsed: 2697 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 236. - # Processes: 136
+found at 8809
+Time elapsed: 2393 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 236. - # Processes: 136
+found at 8809
+Time elapsed: 2400 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 236. - # Processes: 136
+found at 8809
+Time elapsed: 2391 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 236. - # Processes: 136
+found at 8809
+Time elapsed: 2348 microseconds.
+Min: 2348 us. - Max: 2697 us. - Average: 4076 us. - Standard Deviation: 864 us.
+Iteration #1 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 234. - # Processes: 137
+found at 8809
+Time elapsed: 2329 microseconds.
+Iteration #2 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 234. - # Processes: 137
+found at 8809
+Time elapsed: 2189 microseconds.
+Iteration #3 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 234. - # Processes: 137
+found at 8809
+Time elapsed: 2328 microseconds.
+Iteration #4 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 234. - # Processes: 137
+found at 8809
+Time elapsed: 2211 microseconds.
+Iteration #5 out of 5.
+Mode: Multithreading. - List Size: 32000. - Chunk Size: 234. - # Processes: 137
+found at 8809
+Time elapsed: 2260 microseconds.
+Min: 2189 us. - Max: 2329 us. - Average: 3772 us. - Standard Deviation: 756 us.
+Mode: Just one process. - List Size: 32000.
+Iteration #1 out of 5.
+found at 22394
+Time elapsed: 45 microseconds.
+Iteration #2 out of 5.
+found at 22394
+Time elapsed: 63 microseconds.
+Iteration #3 out of 5.
+found at 22394
+Time elapsed: 64 microseconds.
+Iteration #4 out of 5.
+found at 22394
+Time elapsed: 64 microseconds.
+Iteration #5 out of 5.
+found at 22394
+Time elapsed: 64 microseconds.
+Min: 45 us. - Max: 64 us. - Average: 60 us. - Standard Deviation: 2 ms.
