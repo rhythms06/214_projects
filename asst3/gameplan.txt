@@ -1,0 +1,17 @@
+The server should maintain a list of messages sent to it by clients.
+This can be implemented with a linked list, where each node looks a bit like:
+
+  struct box {
+    struct queue* head;
+    struct queue* q;
+    pthread_mutex_t lock;
+    char* name;
+    int in_use;
+    struct box* next;
+  }
+
+We can use a global mutex lock to avoid sync issues with the overall linked list.
+
+We don't need to keep track of previous messages.
+
+My TA recommends using IPv4 and TCP, but we can use any protocols we want, as long as they work on the iLabs.
