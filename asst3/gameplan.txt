@@ -1,3 +1,6 @@
+* DUE ON WEDNESDAY, DECEMBER 11. *
+***  W E  C A N  D O  T H I S  ***
+
 The server should maintain a list of messages sent to it by clients.
 This can be implemented with a linked list, where each node looks a bit like:
 
