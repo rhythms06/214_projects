@@ -1,0 +1,1 @@
+We know that our DUMB network works because we ran a bunch of tests on it and those tests returned favorable results.
