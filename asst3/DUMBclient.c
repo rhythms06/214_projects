@@ -1,11 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "DUMBcli.h"
 
 int main(int argc, char** argv)
 {
-  if(argc != 3)
+  if(argc != 3) /* check out 'man 3 getopt' */
   {
     // Invalid number of arguments.
+	errno = EINVAL ;
+	fprintf(stderr, "%s\n%s\n", strerror(errno), "usage...");
+	exit(EXIT_FAILURE);
   }
   char* addr = argv[1];
   // 'addr' is the IP address or hostname the user wants to connect to.

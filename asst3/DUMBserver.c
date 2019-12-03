@@ -1,11 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "DUMBser.h"
 
 int main(int argc, char** argv)
 {
-  if(argc != 2)
+  if(argc != 2) /* check out 'man 3 getopt' */
   {
     // Invalid number of arguments.
+	errno = EINVAL ;
+	fprintf(stderr, "%s\n%s\n", strerror(errno), "usage...");
+	exit(EXIT_FAILURE);
   }
   int portno = atoi(argv[1]);
   // 'portno' is the port at which the user wants to create a server.
