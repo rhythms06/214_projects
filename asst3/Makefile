@@ -6,7 +6,7 @@ client: DUMBclient.c DUMBcli_lib.c
 
 serve: DUMBserver.c DUMBser_lib.c
 	gcc -c -D_POSIX_SOURCE DUMBser_lib.c
-	gcc -o DUMBserver DUMBserver.c DUMBser_lib.o
+	gcc -o DUMBserve DUMBserver.c DUMBser_lib.o
 
 clean:
-	rm -rf *.o  DUMBclient DUMBserver
+	rm -rf *.o  DUMBclient DUMBserve
