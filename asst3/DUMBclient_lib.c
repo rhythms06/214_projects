@@ -9,8 +9,7 @@ int connect_to_server(char* serv_addr, char* portno)
 
 	memset(&ai, 0, sizeof(struct addrinfo));
 	ai.ai_family = AF_INET;			// IPv4 only
-	ai.ai_socktype = SOCK_STREAM;	// want TCP/IP
-	ai.ai_protocol = 6;				// TCP protocol from /etc/protocols !! maybe need to change to 0
+	ai.ai_socktype = SOCK_STREAM;	// TCP socket
 
 	s = getaddrinfo(serv_addr, portno, &ai, &result);
 	if(s != 0)
@@ -48,6 +47,8 @@ int connect_to_server(char* serv_addr, char* portno)
 	/* connection to server failed */
 	fprintf(stderr, "connection to server failed.\n"
 					"error in %s on line %d: %s\n", __FILE__, __LINE__, strerror(errno));
+	freeaddrinfo(result);
+	close(sfd);
 	exit(EXIT_FAILURE);
 }
 

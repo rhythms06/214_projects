@@ -13,9 +13,9 @@
 /* general client-side MACROS */
 #define USAGE "usage: ./DUMBclient <IPv4 ADDRESS> <PORT NUMBER>\n\n"\
 	"\tIPv4 ADDRESS  is the address of the DUMBserver you wish to connect to.\n"\
-	"\tPORT NUMBER is the corresponding port on that server.\n\n"\
+	"\tPORT NUMBER is the corresponding port on that server.\n"\
+	"\tPlease enter a port number in range [4096 : 65,535]\n\n"\
 	"That's it, that's all folks!\n"
-#define PORTNUM_ERR "Invalid port number.\nPlease enter a port number in range [4096 : 65,535]\n"
 
 /* define COMMANDS as integers (may not need)*/
 #define HELLO 0

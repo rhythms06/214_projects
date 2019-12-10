@@ -8,8 +8,8 @@ int main(int argc, char** argv)
 		exit(EXIT_SUCCESS);
 	}
 
-	int	sfd;	// server socket descriptor
-
+	int		sfd;	// server socket descriptor
+	
 	sfd = connect_to_server(argv[1], argv[2]);
 	close(sfd);	
 
