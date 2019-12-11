@@ -10,6 +10,7 @@
 #include <sys/socket.h>
 #include <netdb.h>
 #include <string.h>
+#include <time.h>
 
 /* general server-side MACROS */
 #define USAGE "usage: ./DUMBserve <PORT NUMBER>\n\n"\
@@ -28,8 +29,15 @@
 #define DELBX 6
 #define CLSBX 7
 
+/* client struct for passing client data to thread */
+typedef struct {
+	int sfd;
+	char *c_ip;
+}client;
+
 /* server side functions */
 int build_server_socket(char *);
+void report_success(int, char *, char *);
 void serve_dat_shit_up(int);
 
 

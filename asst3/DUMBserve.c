@@ -4,8 +4,15 @@ int main(int argc, char** argv)
 {
 	if(argc != 2) 
 	{	/* Invalid number of arguments */
-	fprintf(stdout, "%s", USAGE); 
-	exit(EXIT_SUCCESS);
+	fprintf(stderr, "%s", USAGE); 
+	exit(EXIT_FAILURE);
+	}
+	int portno = atoi(argv[1]);
+	if(portno < 4096 || portno > 65535)
+	{	/* error: port number is out of range */
+		fprintf(stderr, "error: port number out of acceptable range.\n"
+						"%s", USAGE);
+		exit(EXIT_FAILURE);
 	}
 
 	/* open and bind server socket */
