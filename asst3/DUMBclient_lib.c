@@ -54,20 +54,33 @@ int connect_to_server(char* serv_addr, char* portno)
 
 void get_busy_clienting(int sfd)
 {
-	/* send 'connection successful' message to user. */
-	/* prompt for input and fscanf(stdin, ... ?) for commands.
-	 * then, ya know, do you thank with them commands. 
-	 * fuck this shit up homie. you got this. */
+	/* buffers for sending DUMB commands and receiving responses from DUMB server */
+	char cmd[CMD_LEN] = {'0'};
+	char reply[4096] = {'0'};
+	int bytes_read = 0;
 
+	/* initiate session with a DUMB server */
+	strcpy(cmd, "HELLO\0");
+	write(sfd, cmd, CMD_LEN);
+	bytes_read = read(sfd, reply, 2048);
+
+	printf("%s\n", reply);
+
+	if(bytes_read < 0)
+	{	/* error reading */
+		fprintf(stderr, "error in %s on line %d: %s\n", __FILE__, __LINE__, strerror(errno));
+		return;
+	}
+	else if(strcmp(reply, "HELLO DUMBv0 ready!\0") == 0)
+	{	/* session has been initiated */
+		fprintf(stdout, "Session has been initiated with DUMB server.\n");
+	}
+	else
+	{	/* strange response to HELLO */
+		fprintf(stderr, "Session was not initiated. Try again later.\n");
+		return;
+	}
 
 	return;
 }
 
-/*
-void report(int status)
-{
-	// fill in code to report status to client
-	// based on int status, defined in header
-	return;
-}
-*/

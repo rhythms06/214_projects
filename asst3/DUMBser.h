@@ -17,7 +17,7 @@
 	"\tPORT NUMBER is the port on the server that will listen for DUMB client connections.\n"\
 	"\tPlease enter a port number in range [4096 : 65,535]\n\n"\
 	"That's it, that's all folks!\n"
-
+#define CMD_LEN 7
 
 /* define COMMANDS as integers (may not need)*/
 #define HELLO 0
@@ -37,6 +37,7 @@ typedef struct {
 
 /* server side functions */
 int build_server_socket(char *);
+void report_error(int, char *, char *);
 void report_success(int, char *, char *);
 void serve_dat_shit_up(int);
 

@@ -16,6 +16,7 @@
 	"\tPORT NUMBER is the corresponding port on that server.\n"\
 	"\tPlease enter a port number in range [4096 : 65,535]\n\n"\
 	"That's it, that's all folks!\n"
+#define CMD_LEN 7
 
 /* define COMMANDS as integers (may not need)*/
 #define HELLO 0

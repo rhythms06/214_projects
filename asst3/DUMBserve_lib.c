@@ -65,23 +65,59 @@ void* client_thread(void* c)
 	int sfd = cli.sfd;
 	char* cip = cli.c_ip;
 
+	/* communication tools */
+	char request[4096] = {'0'};
+	char response[4096] = {'0'};
+	int bytes_read = 0; 
+
 	pthread_detach(pthread_self());
+
+	/* wait for client to initiate session */
 	report_success(sfd, cip, "connected");
+	bytes_read = read(sfd, request, sizeof(request));
+	if(bytes_read < 0)
+	{	/* error */
+		report_error(sfd, cip, strerror(errno));
+		close(sfd);
+		return;
+	}
+	else if(strcmp(request, "HELLO\0") == 0)
+	{	/* client initiated. send proper response */
+		strcpy(response, "HELLO DUMBv0 ready!\0");
+		write(sfd, response, strlen(response)+1);
+	}
+	else
+	{ /* client didn't initialize. report error and close connection */
+		report_error(sfd, cip, "client did not initiate with HELLO\n");
+		return;
+	}
+	/*
+	do
+	{
+
+	}while(0);
+	*/
+
+
 
 
 
 		
-
 	return;
 }
 
+void report_error(int sfd, char* c_addr, char* err)
+{
+	time_t now; time(&now); char tstmp[26];
+	asctime_r(localtime(&now), tstmp); strtok(tstmp, "\n");
+	fprintf(stderr, "%s %s %s\n", tstmp, c_addr, err);
+}
 
 void report_success(int sfd, char* c_addr, char* cmd)
 {
 	time_t now; time(&now); char tstmp[26];
 	asctime_r(localtime(&now), tstmp); strtok(tstmp, "\n");
 	fprintf(stdout, "%s %s %s\n", tstmp, c_addr, cmd);
-	return;
 }
 
 
