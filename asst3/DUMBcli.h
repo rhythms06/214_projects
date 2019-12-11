@@ -30,10 +30,9 @@
 /* MACROS for reporting status of client to user */
 #define NO_CONNECT -1
 
-/* function for reporting status of client to user */
-void report(int);
-/* attempt to connect to server 3 times */
+/* client side functions */
 int connect_to_server(char *, char *);
+void get_busy_clienting(int);
 
 
 #endif

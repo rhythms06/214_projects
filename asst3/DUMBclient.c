@@ -8,9 +8,16 @@ int main(int argc, char** argv)
 		exit(EXIT_SUCCESS);
 	}
 
-	int		sfd;	// server socket descriptor
-	
+	/* open socket and attempt to connect to server at most 3 times.
+	 * if connection fails, connect_to_server(...) will handle error-reporting
+	 * and shutdown of client process. */
+	int	sfd;
 	sfd = connect_to_server(argv[1], argv[2]);
+
+	/* connection to server succeeded! dope. let's get busy being a client,
+	 * doing client things. */
+	get_busy_clienting(sfd);
+
 	close(sfd);	
 
 	/* Commands to implement:

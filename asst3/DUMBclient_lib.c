@@ -52,10 +52,22 @@ int connect_to_server(char* serv_addr, char* portno)
 	exit(EXIT_FAILURE);
 }
 
+void get_busy_clienting(int sfd)
+{
+	/* send 'connection successful' message to user. */
+	/* prompt for input and fscanf(stdin, ... ?) for commands.
+	 * then, ya know, do you thank with them commands. 
+	 * fuck this shit up homie. you got this. */
 
+
+	return;
+}
+
+/*
 void report(int status)
 {
 	// fill in code to report status to client
 	// based on int status, defined in header
 	return;
 }
+*/
