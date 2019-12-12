@@ -1,1 +1,3 @@
-We know that our DUMB network works because we ran a bunch of tests on it and those tests returned favorable results.
+
+accept() returns 1 every time. So, the server is waiting to read from it's
+standard in ... We couldn't figure out how to get around that. 
