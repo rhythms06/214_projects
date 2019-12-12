@@ -56,98 +56,95 @@ void get_busy_clienting(int sfd)
 {
 	/* buffer for sending DUMB commands */
 	char cmd[4096] = {'0'};
-
 	/* initiate session with a DUMB server */
 	strcpy(cmd, "HELLO\0");
 	write(sfd, cmd, 4096);
-
 	char reply[4096] = {'0'};
 	int bytes_read = read(sfd, reply, 2048);
-
-	// printf("received reply (%d bytes):\n", bytes_read);
-	// printf("%s\n", reply);
+	// printf("Read %d bytes from the server.\n", bytes_read);
 
 	if(bytes_read < 0)
 	{	/* error reading */
 		fprintf(stderr, "error in %s on line %d: %s\n", __FILE__, __LINE__, strerror(errno));
 		return;
 	}
-	else if(strcmp(reply, "HELLO DUMBv0 ready!\0") == 0)
-	{	/* session has been initiated */
-		fprintf(stdout, "Session has been initiated with DUMB server.\n");
-	}
 	else
-	{	/* strange response to HELLO */
-		fprintf(stderr, "Session was not initiated. Try again later.\n");
-		return;
+	{
+		printf("%s\n", reply);
 	}
 
 	int active = 1;
 	int shouldWR = 0;
 	char* buff = NULL;
+	int buffChars = 0;
 	size_t maxSize = 4096;
 
 	while(active)
 	{
-	getline(&buff, &maxSize, stdin);
-
-	if(strcmp(buff, "create\n") == 0)
+	int buffChars = getline(&buff, &maxSize, stdin);
+	buff[buffChars - 1] = '\0';
+	if(strcmp(buff, "create\0") == 0)
 	{
 		printf("create:> ");
 		char* boxName = NULL;
-		getline(&boxName, &maxSize, stdin);
+		buffChars = getline(&boxName, &maxSize, stdin);
+		boxName[buffChars - 1] = '\0';
 		sprintf(cmd, "CREAT %s", boxName);
 		free(boxName);
 		shouldWR = 1;
 	}
-	else if(strcmp(buff, "open\n") == 0)
+	else if(strcmp(buff, "open\0") == 0)
 	{
 		printf("open:> ");
 		char* boxName = NULL;
-		getline(&boxName, &maxSize, stdin);
-		sprintf(cmd, "OPENBX %s", boxName);
+		buffChars = getline(&boxName, &maxSize, stdin);
+		boxName[buffChars - 1] = '\0';
+		sprintf(cmd, "OPNBX %s", boxName);
 		free(boxName);
 		shouldWR = 1;
 	}
-	else if(strcmp(buff, "next\n") == 0)
+	else if(strcmp(buff, "next\0") == 0)
 	{
-		strcpy(cmd, "NXTMSG\0");
+		strcpy(cmd, "NXTMG\0");
 		shouldWR = 1;
 	}
-	else if(strcmp(buff, "put\n") == 0)
+	else if(strcmp(buff, "put\0") == 0)
 	{
 		printf("put:> ");
 		char* msg = NULL;
-		getline(&msg, &maxSize, stdin);
+		buffChars = getline(&msg, &maxSize, stdin);
+		msg[buffChars - 1] = '\0';
 		int msgLength = strlen(msg);
 		sprintf(cmd, "PUTMG!%d!%s", msgLength, msg);
 		free(msg);
 		shouldWR = 1;
 	}
-	else if(strcmp(buff, "delete\n") == 0)
+	else if(strcmp(buff, "delete\0") == 0)
 	{
 		printf("delete:> ");
 		char* boxName = NULL;
-		getline(&boxName, &maxSize, stdin);
+		buffChars = getline(&boxName, &maxSize, stdin);
+		boxName[buffChars - 1] = '\0';
 		sprintf(cmd, "DELBX %s", boxName);
 		free(boxName);
 		shouldWR = 1;
 	}
-	else if(strcmp(buff, "close\n") == 0)
+	else if(strcmp(buff, "close\0") == 0)
 	{
 		printf("close:> ");
 		char* boxName = NULL;
-		getline(&boxName, &maxSize, stdin);
+		buffChars = getline(&boxName, &maxSize, stdin);
+		boxName[buffChars - 1] = '\0';
 		sprintf(cmd, "CLSBX %s", boxName);
 		free(boxName);
 		shouldWR = 1;
 	}
-	else if(strcmp(buff, "quit\n") == 0)
+	else if(strcmp(buff, "quit\0") == 0)
 	{
 		strcpy(cmd, "GDBYE\0");
 		shouldWR = 1;
 	}
-	else if(strcmp(buff, "help\n") == 0)
+	else if(strcmp(buff, "help\0") == 0)
 	{
 		printf("You can send the following commands:\n");
 		printf("'quit' (which causes GDBYE)\n");
@@ -178,7 +175,7 @@ void get_busy_clienting(int sfd)
 		}
 		else
 		{
-			printf("%s", reply);
+			printf("%s\n", reply);
 		}
 	}
 	}

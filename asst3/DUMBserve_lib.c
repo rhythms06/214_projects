@@ -79,7 +79,7 @@ void* client_thread(void* c)
 
 	while(bytes_read == 0)
 	{
-			printf("listening for msg...\n");
+			// printf("listening for msg...\n");
 			bytes_read = read(sfd, request, sizeof(request));
 	}
 
@@ -88,37 +88,84 @@ void* client_thread(void* c)
 		printf("error\n");
 		report_error(sfd, cip, strerror(errno));
 		close(sfd);
-		return;
 	}
-	// else if(strcmp(request, "HELLO\0") == 0)
-	// {	/* client initiated. send proper response */
-	// 	strcpy(response, "HELLO DUMBv0 ready!\0");
-	// 	write(sfd, response, strlen(response)+1);
-	// }
-	// else
-	// { /* client didn't initialize. report error and close connection */
-	// 	report_error(sfd, cip, "client did not initiate with HELLO\n");
-	// 	return;
-	// }
+	else if(strcmp(request, "HELLO\0") == 0)
+	{	/* client initiated. send proper response */
+		strcpy(response, "HELLO DUMBv0 ready!\0");
+		write(sfd, response, strlen(response)+1);
+	}
 	else
-	{
-
-		printf("msg (%d bytes):\n", bytes_read);
-		printf("%s\n", request);
+	{ /* client didn't initialize. report error and close connection */
+		report_error(sfd, cip, "client did not initiate with HELLO\n");
 	}
+
+	int active = 1;
+
+	while(active)
+	{
+	bytes_read = 0;
+
+	while(bytes_read == 0)
+	{
+		bytes_read = read(sfd, request, sizeof(request));
+		if(bytes_read < 0)
+		{	/* error */
+			printf("error\n");
+			// report_error(sfd, cip, strerror(errno));
+		}
+		else
+		{
+			// printf("client sent '%s'\n", request);
+			if(strcmp(request, "GDBYE\0") == 0)
+			{
+				printf("client sent (GDBYE) '%s'\n", request);
+				write(sfd, "server received GDBYE", 4096);
+			}
+			else if(strncmp(request, "CREAT", 5) == 0)
+			{
+				printf("client sent (CREAT) '%s'\n", request);
+				write(sfd, "server received CREAT", 4096);
+			}
+			else if(strncmp(request, "DELBX", 5) == 0)
+			{
+				printf("client sent (DELBX) '%s'\n", request);
+				write(sfd, "server received DELBX", 4096);
+			}
+			else if(strncmp(request, "OPNBX", 5) == 0)
+			{
+				printf("client sent (OPNBX) '%s'\n", request);
+				write(sfd, "server received OPNBX", 4096);
+			}
+			else if(strncmp(request, "CLSBX", 5) == 0)
+			{
+				printf("client sent (CLSBX) '%s'\n", request);
+				write(sfd, "server received CLSBX", 4096);
+			}
+			else if(strncmp(request, "NXTMG", 5) == 0)
+			{
+				printf("client sent (NXTMG) '%s'\n", request);
+				write(sfd, "server received NXTMG", 4096);
+			}
+			else if(strncmp(request, "PUTMG", 5) == 0)
+			{
+				printf("client sent (PUTMG) '%s'\n", request);
+				write(sfd, "server received PUTMG", 4096);
+			}
+			else
+			{
+				printf("client sent invalid command\n");
+			}
+		}
+	}
+	}
+
 	/*
 	do
 	{
 
 	}while(0);
 	*/
-
-
-
-
-
-
-	return;
+	return 0;
 }
 
 void report_error(int sfd, char* c_addr, char* err)
@@ -158,10 +205,11 @@ void serve_dat_shit_up(int sfd)
 	 * accept(2) will block if the queue is empty. */
 	sl = sizeof(saddr);
 	thread_count = 0;
-	while ( (fd = accept(sfd, (struct sockaddr*)&saddr, &sl) != -1) )
+	while ( (fd = accept(sfd, (struct sockaddr*)&saddr, &sl)) != -1 )
 	{
 		/* build client struct to pass client data to new thread.
 		 * include file descriptor for client socket, and client's IP address */
+		 // printf("client_sfd: %d\n", fd);
 		client* client_id = (client*)malloc(sizeof(client));
 		client_id->sfd = fd;
 		client_id->c_ip = (char*)malloc(INET_ADDRSTRLEN);
