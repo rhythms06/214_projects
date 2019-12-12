@@ -61,38 +61,34 @@ void get_busy_clienting(int sfd)
 	strcpy(cmd, "HELLO\0");
 	write(sfd, cmd, 4096);
 
-	// char reply[4096] = {'0'};
-	// int bytes_read = 0;
-	// while(bytes_read == 0)
-	// {
-	// 		bytes_read = read(sfd, reply, 2048);
-	// }
-	//
+	char reply[4096] = {'0'};
+	int bytes_read = read(sfd, reply, 2048);
+
 	// printf("received reply (%d bytes):\n", bytes_read);
 	// printf("%s\n", reply);
-	//
-	// if(bytes_read < 0)
-	// {	/* error reading */
-	// 	fprintf(stderr, "error in %s on line %d: %s\n", __FILE__, __LINE__, strerror(errno));
-	// 	return;
-	// }
-	// else if(strcmp(reply, "HELLO DUMBv0 ready!\0") == 0)
-	// {	/* session has been initiated */
-	// 	fprintf(stdout, "Session has been initiated with DUMB server.\n");
-	// }
-	// else
-	// {	/* strange response to HELLO */
-	// 	fprintf(stderr, "Session was not initiated. Try again later.\n");
-	// 	return;
-	// }
+
+	if(bytes_read < 0)
+	{	/* error reading */
+		fprintf(stderr, "error in %s on line %d: %s\n", __FILE__, __LINE__, strerror(errno));
+		return;
+	}
+	else if(strcmp(reply, "HELLO DUMBv0 ready!\0") == 0)
+	{	/* session has been initiated */
+		fprintf(stdout, "Session has been initiated with DUMB server.\n");
+	}
+	else
+	{	/* strange response to HELLO */
+		fprintf(stderr, "Session was not initiated. Try again later.\n");
+		return;
+	}
 
 	int active = 1;
+	int shouldWR = 0;
 	char* buff = NULL;
 	size_t maxSize = 4096;
 
 	while(active)
 	{
-	// printf("write something...\n");
 	getline(&buff, &maxSize, stdin);
 
 	if(strcmp(buff, "create\n") == 0)
@@ -100,40 +96,23 @@ void get_busy_clienting(int sfd)
 		printf("create:> ");
 		char* boxName = NULL;
 		getline(&boxName, &maxSize, stdin);
-		// if(boxName[0] < 65 || (boxName[0] > 90 && boxName[0] < 97) || boxName[0] > 122 || strlen(boxName) < 5 || strlen(boxName) > 25)
-		// {
-		// 	printf("ER:WHAT?\n");
-		// }
-		// else
-		// {
-			sprintf(cmd, "CREAT %s", boxName);
-			write(sfd, cmd, 4096);
-			// TODO: Read and print response from the server.
-		// }
+		sprintf(cmd, "CREAT %s", boxName);
 		free(boxName);
+		shouldWR = 1;
 	}
 	else if(strcmp(buff, "open\n") == 0)
 	{
 		printf("open:> ");
 		char* boxName = NULL;
 		getline(&boxName, &maxSize, stdin);
-		// if(boxName[0] < 65 || (boxName[0] > 90 && boxName[0] < 97) || boxName[0] > 122 || strlen(boxName) < 5 || strlen(boxName) > 25)
-		// {
-		// 	printf("ER:WHAT?\n");
-		// }
-		// else
-		// {
-			sprintf(cmd, "OPENBX %s", boxName);
-			write(sfd, cmd, 4096);
-			// TODO: Read and print response from the server.
-		// }
+		sprintf(cmd, "OPENBX %s", boxName);
 		free(boxName);
+		shouldWR = 1;
 	}
 	else if(strcmp(buff, "next\n") == 0)
 	{
 		strcpy(cmd, "NXTMSG\0");
-		write(sfd, cmd, 4096);
-		// TODO: Read and print response from the server.
+		shouldWR = 1;
 	}
 	else if(strcmp(buff, "put\n") == 0)
 	{
@@ -142,9 +121,8 @@ void get_busy_clienting(int sfd)
 		getline(&msg, &maxSize, stdin);
 		int msgLength = strlen(msg);
 		sprintf(cmd, "PUTMG!%d!%s", msgLength, msg);
-		write(sfd, cmd, 4096);
-		// TODO: Read and print response from the server.
 		free(msg);
+		shouldWR = 1;
 	}
 	else if(strcmp(buff, "delete\n") == 0)
 	{
@@ -152,9 +130,8 @@ void get_busy_clienting(int sfd)
 		char* boxName = NULL;
 		getline(&boxName, &maxSize, stdin);
 		sprintf(cmd, "DELBX %s", boxName);
-		write(sfd, cmd, 4096);
-		// TODO: Read and print response from the server.
 		free(boxName);
+		shouldWR = 1;
 	}
 	else if(strcmp(buff, "close\n") == 0)
 	{
@@ -162,16 +139,13 @@ void get_busy_clienting(int sfd)
 		char* boxName = NULL;
 		getline(&boxName, &maxSize, stdin);
 		sprintf(cmd, "CLSBX %s", boxName);
-		write(sfd, cmd, 4096);
-		// TODO: Read and print response from the server.
 		free(boxName);
+		shouldWR = 1;
 	}
 	else if(strcmp(buff, "quit\n") == 0)
 	{
 		strcpy(cmd, "GDBYE\0");
-		write(sfd, cmd, 4096);
-		// TODO: Read and print response from the server.
-		// TODO: Upon success, shut down the program.
+		shouldWR = 1;
 	}
 	else if(strcmp(buff, "help\n") == 0)
 	{
@@ -190,9 +164,28 @@ void get_busy_clienting(int sfd)
 	{
 		printf("invalid command. try 'help'.\n");
 	}
+	if(shouldWR == 1)
+	{
+		write(sfd, cmd, 4096);
+		bytes_read = read(sfd, reply, 2048);
+
+		// printf("received reply (%d bytes):\n", bytes_read);
+		// printf("%s\n", reply);
+
+		if(bytes_read < 0)
+		{	/* error reading */
+			fprintf(stderr, "error in %s on line %d: %s\n", __FILE__, __LINE__, strerror(errno));
+		}
+		else
+		{
+			printf("%s", reply);
+		}
+	}
 	}
 
 	free(buff);
+
+
 
 	return;
 }
