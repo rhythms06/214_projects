@@ -20,7 +20,7 @@ int connect_to_server(char* serv_addr, char* portno)
 
 	/* build socket */
 	sfd = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
-	if(sfd == -1)
+	if(sfd < 0)
 	{ 	/* socket failed */
 		fprintf(stderr, "error in %s on line %d: %s\n", __FILE__, __LINE__, gai_strerror(s));
 		freeaddrinfo(result);
@@ -54,33 +54,145 @@ int connect_to_server(char* serv_addr, char* portno)
 
 void get_busy_clienting(int sfd)
 {
-	/* buffers for sending DUMB commands and receiving responses from DUMB server */
-	char cmd[CMD_LEN] = {'0'};
-	char reply[4096] = {'0'};
-	int bytes_read = 0;
+	/* buffer for sending DUMB commands */
+	char cmd[4096] = {'0'};
 
 	/* initiate session with a DUMB server */
 	strcpy(cmd, "HELLO\0");
-	write(sfd, cmd, CMD_LEN);
-	bytes_read = read(sfd, reply, 2048);
+	write(sfd, cmd, 4096);
 
-	printf("%s\n", reply);
+	// char reply[4096] = {'0'};
+	// int bytes_read = 0;
+	// while(bytes_read == 0)
+	// {
+	// 		bytes_read = read(sfd, reply, 2048);
+	// }
+	//
+	// printf("received reply (%d bytes):\n", bytes_read);
+	// printf("%s\n", reply);
+	//
+	// if(bytes_read < 0)
+	// {	/* error reading */
+	// 	fprintf(stderr, "error in %s on line %d: %s\n", __FILE__, __LINE__, strerror(errno));
+	// 	return;
+	// }
+	// else if(strcmp(reply, "HELLO DUMBv0 ready!\0") == 0)
+	// {	/* session has been initiated */
+	// 	fprintf(stdout, "Session has been initiated with DUMB server.\n");
+	// }
+	// else
+	// {	/* strange response to HELLO */
+	// 	fprintf(stderr, "Session was not initiated. Try again later.\n");
+	// 	return;
+	// }
 
-	if(bytes_read < 0)
-	{	/* error reading */
-		fprintf(stderr, "error in %s on line %d: %s\n", __FILE__, __LINE__, strerror(errno));
-		return;
+	int active = 1;
+	char* buff = NULL;
+	size_t maxSize = 4096;
+
+	while(active)
+	{
+	// printf("write something...\n");
+	getline(&buff, &maxSize, stdin);
+
+	if(strcmp(buff, "create\n") == 0)
+	{
+		printf("create:> ");
+		char* boxName = NULL;
+		getline(&boxName, &maxSize, stdin);
+		// if(boxName[0] < 65 || (boxName[0] > 90 && boxName[0] < 97) || boxName[0] > 122 || strlen(boxName) < 5 || strlen(boxName) > 25)
+		// {
+		// 	printf("ER:WHAT?\n");
+		// }
+		// else
+		// {
+			sprintf(cmd, "CREAT %s", boxName);
+			write(sfd, cmd, 4096);
+			// TODO: Read and print response from the server.
+		// }
+		free(boxName);
 	}
-	else if(strcmp(reply, "HELLO DUMBv0 ready!\0") == 0)
-	{	/* session has been initiated */
-		fprintf(stdout, "Session has been initiated with DUMB server.\n");
+	else if(strcmp(buff, "open\n") == 0)
+	{
+		printf("open:> ");
+		char* boxName = NULL;
+		getline(&boxName, &maxSize, stdin);
+		// if(boxName[0] < 65 || (boxName[0] > 90 && boxName[0] < 97) || boxName[0] > 122 || strlen(boxName) < 5 || strlen(boxName) > 25)
+		// {
+		// 	printf("ER:WHAT?\n");
+		// }
+		// else
+		// {
+			sprintf(cmd, "OPENBX %s", boxName);
+			write(sfd, cmd, 4096);
+			// TODO: Read and print response from the server.
+		// }
+		free(boxName);
+	}
+	else if(strcmp(buff, "next\n") == 0)
+	{
+		strcpy(cmd, "NXTMSG\0");
+		write(sfd, cmd, 4096);
+		// TODO: Read and print response from the server.
+	}
+	else if(strcmp(buff, "put\n") == 0)
+	{
+		printf("put:> ");
+		char* msg = NULL;
+		getline(&msg, &maxSize, stdin);
+		int msgLength = strlen(msg);
+		sprintf(cmd, "PUTMG!%d!%s", msgLength, msg);
+		write(sfd, cmd, 4096);
+		// TODO: Read and print response from the server.
+		free(msg);
+	}
+	else if(strcmp(buff, "delete\n") == 0)
+	{
+		printf("delete:> ");
+		char* boxName = NULL;
+		getline(&boxName, &maxSize, stdin);
+		sprintf(cmd, "DELBX %s", boxName);
+		write(sfd, cmd, 4096);
+		// TODO: Read and print response from the server.
+		free(boxName);
+	}
+	else if(strcmp(buff, "close\n") == 0)
+	{
+		printf("close:> ");
+		char* boxName = NULL;
+		getline(&boxName, &maxSize, stdin);
+		sprintf(cmd, "CLSBX %s", boxName);
+		write(sfd, cmd, 4096);
+		// TODO: Read and print response from the server.
+		free(boxName);
+	}
+	else if(strcmp(buff, "quit\n") == 0)
+	{
+		strcpy(cmd, "GDBYE\0");
+		write(sfd, cmd, 4096);
+		// TODO: Read and print response from the server.
+		// TODO: Upon success, shut down the program.
+	}
+	else if(strcmp(buff, "help\n") == 0)
+	{
+		printf("You can send the following commands:\n");
+		printf("'quit' (which causes GDBYE)\n");
+		printf("'create' (which causes CREAT)\n");
+		printf("'delete' (which causes DELBX)\n");
+		printf("'open' (which causes OPNBX)\n");
+		printf("'close' (which causes CLSBX)\n");
+		printf("'next' (which causes NXTMG)\n");
+		printf("'put' (which causes PUTMG)\n");
+		printf("'help' (which lists these commands)\n");
+
 	}
 	else
-	{	/* strange response to HELLO */
-		fprintf(stderr, "Session was not initiated. Try again later.\n");
-		return;
+	{
+		printf("invalid command. try 'help'.\n");
 	}
+	}
+
+	free(buff);
 
 	return;
 }
-

@@ -6,14 +6,14 @@ int build_server_socket(char* portno)
 	struct addrinfo 	ai;
 	struct addrinfo* 	result;
 	int					sfd, s, optval;
-	
+
 	memset(&ai, 0, sizeof(struct addrinfo));
 	ai.ai_family = AF_INET;			// IPv4
 	ai.ai_socktype = SOCK_STREAM;	// TCP socket
 	ai.ai_flags = AI_PASSIVE;		// wildcard IP to bind(2) to all interfaces
-	ai.ai_canonname = NULL;			
-	ai.ai_addr = NULL;				
-	ai.ai_next = NULL;			
+	ai.ai_canonname = NULL;
+	ai.ai_addr = NULL;
+	ai.ai_next = NULL;
 
 	/* build the addrinfo struct 'result' based on options set above */
 	s = getaddrinfo(NULL, portno, &ai, &result);
@@ -52,7 +52,7 @@ int build_server_socket(char* portno)
 		close(sfd);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	/* socket bound successfuly. return socket file descriptor */
 	freeaddrinfo(result);
 	return sfd;
@@ -68,28 +68,43 @@ void* client_thread(void* c)
 	/* communication tools */
 	char request[4096] = {'0'};
 	char response[4096] = {'0'};
-	int bytes_read = 0; 
+	int bytes_read = 0;
 
 	pthread_detach(pthread_self());
 
 	/* wait for client to initiate session */
 	report_success(sfd, cip, "connected");
-	bytes_read = read(sfd, request, sizeof(request));
+
+	bytes_read = 0;
+
+	while(bytes_read == 0)
+	{
+			printf("listening for msg...\n");
+			bytes_read = read(sfd, request, sizeof(request));
+	}
+
 	if(bytes_read < 0)
 	{	/* error */
+		printf("error\n");
 		report_error(sfd, cip, strerror(errno));
 		close(sfd);
 		return;
 	}
-	else if(strcmp(request, "HELLO\0") == 0)
-	{	/* client initiated. send proper response */
-		strcpy(response, "HELLO DUMBv0 ready!\0");
-		write(sfd, response, strlen(response)+1);
-	}
+	// else if(strcmp(request, "HELLO\0") == 0)
+	// {	/* client initiated. send proper response */
+	// 	strcpy(response, "HELLO DUMBv0 ready!\0");
+	// 	write(sfd, response, strlen(response)+1);
+	// }
+	// else
+	// { /* client didn't initialize. report error and close connection */
+	// 	report_error(sfd, cip, "client did not initiate with HELLO\n");
+	// 	return;
+	// }
 	else
-	{ /* client didn't initialize. report error and close connection */
-		report_error(sfd, cip, "client did not initiate with HELLO\n");
-		return;
+	{
+
+		printf("msg (%d bytes):\n", bytes_read);
+		printf("%s\n", request);
 	}
 	/*
 	do
@@ -102,7 +117,7 @@ void* client_thread(void* c)
 
 
 
-		
+
 	return;
 }
 
